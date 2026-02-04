@@ -55,7 +55,7 @@
             <div class="hero-center">
                 <div class="intro-photo-wrap anim-item" data-delay="2">
                     <img src="assets/suhira.jpg" alt="Suhira Balarajan" class="intro-photo">
-                    <div class="intro-photo-shape"></div>
+                    <!-- Removed shape since image has its own bg -->
                 </div>
                 <div class="intro-ctas anim-item" data-delay="4">
                     <a href="#portfolio" class="btn-portfolio">Portfolio <i
@@ -137,34 +137,52 @@
         <div class="container">
             <h2 class="section-title">Work <span>Experience</span></h2>
             <p class="section-subtitle">My professional journey</p>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card card">
-                        <div class="card-meta">
-                            <span class="card-period">Feb 2025 – Aug 2025</span>
-                            <span class="card-type">Internship</span>
-                        </div>
-                        <h3 class="card-title">Software Engineer Intern</h3>
-                        <p class="card-company">Smartzi Lanka (Pvt) Ltd (UK-based)</p>
-                        <p class="card-description">Backend Software Engineer on real-world B2B transportation
-                            integrations. Developed and maintained backend services using Spring Boot following agile
-                            practices.</p>
-                        <ul class="card-highlights">
-                            <li>Implemented B2B integrations with GNET and Uber (booking, update, cancellation
-                                workflows)</li>
-                            <li>Designed secure REST APIs with token-based auth and robust exception handling</li>
-                            <li>Integrated flight data and geolocation services; DynamoDB for booking/trip/webhook data
-                            </li>
-                            <li>Hands-on with production backend, cloud deployment, and large-scale B2B workflows</li>
-                        </ul>
-                        <div class="card-tech">
-                            <span class="tech-pill">Spring Boot</span>
-                            <span class="tech-pill">REST API</span>
-                            <span class="tech-pill">DynamoDB</span>
-                            <span class="tech-pill">AWS</span>
+
+            <div class="experience-grid">
+                <!-- Left: Timeline -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card card">
+                            <div class="card-meta">
+                                <span class="card-period">Feb 2025 – Aug 2025</span>
+                                <span class="card-type">Internship</span>
+                            </div>
+                            <h3 class="card-title">Software Engineer Intern</h3>
+                            <p class="card-company">Smartzi Lanka (Pvt) Ltd (UK-based)</p>
+                            <p class="card-description">Backend Software Engineer on real-world B2B transportation
+                                integrations. Developed and maintained backend services using Spring Boot following
+                                agile
+                                practices.</p>
+                            <ul class="card-highlights">
+                                <li>Implemented B2B integrations with GNET and Uber (booking, update, cancellation
+                                    workflows)</li>
+                                <li>Designed secure REST APIs with token-based auth and robust exception handling</li>
+                                <li>Integrated flight data and geolocation services; DynamoDB for booking/trip/webhook
+                                    data
+                                </li>
+                                <li>Hands-on with production backend, cloud deployment, and large-scale B2B workflows
+                                </li>
+                            </ul>
+                            <div class="card-tech">
+                                <span class="tech-pill">Spring Boot</span>
+                                <span class="tech-pill">REST API</span>
+                                <span class="tech-pill">DynamoDB</span>
+                                <span class="tech-pill">AWS</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Right: Open to Opportunities -->
+                <div class="opportunity-card side-card">
+                    <i class="fa-solid fa-briefcase opp-icon"></i>
+                    <h2 class="opp-title">Open to Opportunities</h2>
+                    <p class="opp-text">Interested in new challenges and exciting projects. I am available for immediate
+                        joining.</p>
+                    <a href="#contact" class="btn-opp">
+                        Get in Touch <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -420,25 +438,45 @@
         <div class="container">
             <h2 class="section-title">Education</h2>
             <p class="section-subtitle">Academic background</p>
-            <div class="education-list">
-                <div class="edu-card card">
-                    <h3>University of Moratuwa</h3>
-                    <p class="edu-degree">BSc (Hons) in Information Technology</p>
-                    <p class="edu-meta">June 2022 – 2026 · CGPA: 3.4127</p>
+            <div class="timeline">
+                <!-- UoM -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="edu-year">June 2022 – 2026</span>
+                        <div class="edu-degree">BSc (Hons) in Information Technology</div>
+                        <div class="edu-place">University of Moratuwa</div>
+                        <div class="edu-grade">CGPA: 3.4127</div>
+                    </div>
                 </div>
-                <div class="edu-card card">
-                    <h3>J/Vembadi Girls' High School</h3>
-                    <p class="edu-degree">G.C.E A/L – Biological Science (2017–2019)</p>
-                    <p class="edu-meta">Biology: A, Chemistry: A, Physics: C · Z-Score: 1.7543</p>
+
+                <!-- A/L -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="edu-year">2017 – 2019</span>
+                        <div class="edu-degree">G.C.E Advanced Level</div>
+                        <div class="edu-place">J/Vembadi Girls' High School</div>
+                        <div class="edu-grade">Biological Science Stream — 2As, 1C (Z-Score: 1.7543)</div>
+                    </div>
                 </div>
-                <div class="edu-card card">
-                    <h3>J/Vembadi Girls' High School</h3>
-                    <p class="edu-degree">G.C.E O/L (2011–2016)</p>
-                    <p class="edu-meta">9 A's</p>
+
+                <!-- O/L -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="edu-year">2011 – 2016</span>
+                        <div class="edu-degree">G.C.E Ordinary Level</div>
+                        <div class="edu-place">J/Vembadi Girls' High School</div>
+                        <div class="edu-grade">Distinctions: 9 A's</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Open to Opportunities -->
+
 
     <!-- Contact -->
     <section id="contact" class="section section-contact">

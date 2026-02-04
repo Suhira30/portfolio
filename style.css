@@ -1,16 +1,23 @@
 :root {
     --bg-dark: #0a0a0a;
     --bg-card: #141414;
-    --bg-hero: #fafafa;
-    --primary: #00e5ff;
-    --primary-soft: #22d3ee;
-    --primary-glow: rgba(0, 229, 255, 0.25);
-    --text-dark: #1a1a1a;
-    --text-muted: #666;
-    --white: #fff;
-    --glass: rgba(255, 255, 255, 0.06);
+    --bg-hero: #0a0a0a;
+    /* Golden Amber Theme */
+    --primary: #f59e0b;
+    /* Amber/Gold */
+    --primary-soft: #fbbf24;
+    /* Softer Yellow/Gold */
+    --primary-glow: rgba(245, 158, 11, 0.5);
+
+    --bg-dark: #0a0a0a;
+    --bg-card: #121212;
+    --text-main: #ffffff;
+    --text-muted: #a3a3a3;
+
+    --white: #ffffff;
+    --glass: rgba(255, 255, 255, 0.03);
     --border: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(0, 229, 255, 0.3);
+    --border-hover: rgba(245, 158, 11, 0.5);
     --font-display: 'Playfair Display', Georgia, serif;
     --radius-md: 12px;
     --radius-lg: 20px;
@@ -30,6 +37,23 @@ body {
     color: var(--white);
     overflow-x: hidden;
     min-height: 100vh;
+    position: relative;
+}
+
+/* Tech Background Overlay (Subtle Waves) */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    /* Moire Interference Pattern to create "Waves" */
+    background-image:
+        repeating-radial-gradient(circle at 0% 50%, transparent 0, transparent 40px, rgba(245, 158, 11, 0.02) 40px, rgba(245, 158, 11, 0.02) 41px),
+        repeating-radial-gradient(circle at 100% 50%, transparent 0, transparent 40px, rgba(245, 158, 11, 0.02) 40px, rgba(245, 158, 11, 0.02) 41px);
+    opacity: 0.6;
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
 }
 
 /* ----- Top bar: pill-shaped, fixed, appears in every section ----- */
@@ -83,7 +107,7 @@ body {
     min-height: 100vh;
     padding-top: 80px;
     background: var(--bg-hero);
-    color: var(--text-dark);
+    color: var(--white);
     position: relative;
     display: flex;
     align-items: center;
@@ -166,13 +190,14 @@ body {
 }
 
 .hello-bubble {
-    background: var(--white);
-    border: 2px solid var(--text-dark);
+    background: var(--bg-card);
+    border: 1px solid var(--primary);
+    color: var(--white);
     padding: 8px 16px;
     border-radius: 999px;
     font-weight: 600;
     font-size: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 15px var(--primary-glow);
 }
 
 .hello-burst {
@@ -253,14 +278,14 @@ body {
 .testimonial-quote {
     font-size: 4rem;
     line-height: 1;
-    color: var(--text-dark);
-    opacity: 0.25;
+    color: var(--primary);
+    opacity: 0.5;
     display: block;
 }
 
 .intro-testimonial p {
     font-size: 0.95rem;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
     margin-top: -0.5rem;
 }
@@ -379,8 +404,8 @@ body {
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    background: radial-gradient(ellipse at 20% 30%, rgba(0, 229, 255, 0.08) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 70%, rgba(0, 229, 255, 0.05) 0%, transparent 45%);
+    background: radial-gradient(ellipse at 20% 30%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(245, 158, 11, 0.05) 0%, transparent 45%);
 }
 
 .container {
@@ -621,8 +646,8 @@ body {
 .tech-pill {
     font-size: 0.8rem;
     padding: 6px 12px;
-    background: rgba(0, 229, 255, 0.1);
-    border: 1px solid rgba(0, 229, 255, 0.3);
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
     border-radius: var(--radius-full);
     color: var(--primary);
 }
@@ -652,8 +677,8 @@ body {
 }
 
 .project-card-animated:hover {
-    border-color: rgba(0, 229, 255, 0.35);
-    box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);
+    border-color: rgba(245, 158, 11, 0.35);
+    box-shadow: 0 0 30px rgba(245, 158, 11, 0.15);
     transform: translateY(-4px);
 }
 
@@ -743,7 +768,7 @@ body {
 }
 
 .project-card-animated:hover .tech-icon {
-    border-color: rgba(0, 229, 255, 0.3);
+    border-color: rgba(245, 158, 11, 0.3);
     color: var(--white);
 }
 
@@ -974,7 +999,7 @@ body {
 .cert-icon-box {
     width: 48px;
     height: 48px;
-    background: rgba(0, 229, 255, 0.1);
+    background: rgba(245, 158, 11, 0.1);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -1087,7 +1112,7 @@ body {
 }
 
 
-/* ----- Education (Timeline) ----- */
+/* ----- Education (Clean Vertical Timeline) ----- */
 .section-education {
     background: var(--bg-dark);
 }
@@ -1095,84 +1120,65 @@ body {
 .timeline {
     position: relative;
     max-width: 800px;
-    margin: 2rem auto 0;
-    padding: 2rem 0;
+    margin: 3rem auto 0;
+    padding: 2rem 0 2rem 2rem;
 }
 
-/* Vertical Line */
+/* Vertical Line (Left) */
 .timeline::before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 20px;
+    left: 0;
     width: 2px;
     background: linear-gradient(to bottom, var(--primary), var(--primary-soft), transparent);
-    box-shadow: 0 0 15px var(--primary-glow);
+    box-shadow: 0 0 10px var(--primary-glow);
 }
 
 .timeline-item {
     position: relative;
-    padding-left: 50px;
-    margin-bottom: 3rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    padding-left: 30px;
 }
 
 .timeline-item:last-child {
     margin-bottom: 0;
 }
 
-/* The Dot */
+/* The Line Dot */
 .timeline-dot {
     position: absolute;
-    left: 11px;
-    top: 5px;
+    left: -9px;
+    top: 24px;
     width: 20px;
     height: 20px;
     background: var(--bg-dark);
     border: 2px solid var(--primary);
     border-radius: 50%;
     z-index: 2;
-    box-shadow: 0 0 10px var(--primary-glow);
     transition: transform 0.3s, background 0.3s;
 }
 
 .timeline-item:hover .timeline-dot {
     background: var(--primary);
     transform: scale(1.2);
+    box-shadow: 0 0 15px var(--primary-glow);
 }
 
-/* The Card Content */
+/* Timeline Content Card */
 .timeline-content {
     background: var(--glass);
     border: 1px solid var(--border);
     padding: 1.5rem;
     border-radius: var(--radius-md);
-    transition: border-color 0.3s, transform 0.3s;
-    position: relative;
+    transition: border-color 0.2s, transform 0.2s;
 }
 
 .timeline-content:hover {
     border-color: var(--primary);
     transform: translateX(5px);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-}
-
-/* Arrow pointing to dot */
-.timeline-content::after {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 15px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid var(--border);
-    transition: border-right-color 0.3s;
-}
-
-.timeline-content:hover::after {
-    border-right-color: var(--primary);
 }
 
 .edu-year {
@@ -1180,11 +1186,9 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
     color: var(--primary);
-    background: rgba(0, 229, 255, 0.1);
-    padding: 4px 10px;
-    border-radius: 99px;
-    margin-bottom: 0.75rem;
-    border: 1px solid rgba(0, 229, 255, 0.2);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .edu-degree {
@@ -1192,7 +1196,6 @@ body {
     font-weight: 700;
     color: var(--white);
     margin-bottom: 0.25rem;
-    font-family: var(--font-heading);
 }
 
 .edu-place {
@@ -1204,6 +1207,111 @@ body {
 .edu-grade {
     font-size: 0.9rem;
     color: var(--text-muted);
+}
+
+/* ----- Open to Opportunities (Shared Styles) ----- */
+.opportunity-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3rem;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.opportunity-card:hover {
+    border-color: var(--primary);
+}
+
+.opp-icon {
+    font-size: 2.5rem;
+    color: #a0a0a0;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.opp-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.opp-text {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.btn-opp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: gap 0.2s;
+}
+
+.btn-opp:hover {
+    gap: 15px;
+    text-decoration: underline;
+}
+
+/* ----- Experience Grid Layout ----- */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+    /* Stretch to matching heights */
+    margin-top: 3rem;
+}
+
+.timeline {
+    margin: 0;
+    padding: 0 0 2rem 2rem;
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure timeline line covers full height */
+.timeline::before {
+    bottom: 2rem;
+}
+
+.opportunity-card.side-card {
+    margin: 0;
+    padding: 3rem;
+    height: auto;
+    /* Let grid stretch it */
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    /* Removed sticky to ensure it matches the full height of the neighbor */
+}
+
+/* Mobile Responsiveness for Grid */
+@media (max-width: 900px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .opportunity-card.side-card {
+        min-height: auto;
+        padding: 3rem;
+    }
 }
 
 /* ----- Contact ----- */
