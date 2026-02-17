@@ -74,7 +74,7 @@
   // ----- Typing effect -----
   var roleEl = document.querySelector('.intro-role');
   if (roleEl) {
-    var roles = ["Software Engineer", "UI/UX Enthusiast", "Creative Developer", "Problem Solver"];
+    var roles = ["User-Focused Engineer", "Problem Solver", "Backend Developer", "Full-Stack Enthusiast"];
     var roleIdx = 0;
     var charIdx = 0;
     var isDeleting = false;
