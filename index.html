@@ -580,13 +580,15 @@
                         <p class="cta-text">Interested in new challenges and exciting projects. I am available for
                             immediate joining.</p>
                     </div>
-                    <form action="https://formsubmit.co/balarajansuhira@gmail.com" method="POST" class="contact-form">
-                        <!-- Honeypot Spam Protection -->
-                        <input type="text" name="_honey" style="display:none">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <!-- Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="e7f2b66c-a813-41d2-8aa4-1881a7329a70">
                         
-                        <!-- FormSubmit Configuration -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="New message from your portfolio!">
+                        <!-- Form Configuration -->
+                        <input type="hidden" name="subject" value="New message from your portfolio!">
+                        <input type="hidden" name="from_name" value="Your Portfolio">
+                        <!-- Optional Honeypot -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         
                         <!-- Form Inputs -->
                         <input type="text" name="name" placeholder="Your Full Name" required class="form-input">
