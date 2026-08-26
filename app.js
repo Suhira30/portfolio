@@ -1,20 +1,28 @@
 import { portfolioData } from './src/data/portfolioData.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    initCustomCursor();
-    initCurtainMenu();
-    initHeroTyping();
-    renderEducationAccordion();
-    renderSkillsMarquee();
-    renderSkillsCategories();
-    renderProjects();
-    initProjectFilters();
-    renderServices();
-    renderExperience();
-    renderCredentials();
-    renderSocials();
-    initContactForm();
+    safeRun(initCustomCursor, 'CustomCursor');
+    safeRun(initCurtainMenu, 'CurtainMenu');
+    safeRun(initHeroTyping, 'HeroTyping');
+    safeRun(renderEducationAccordion, 'EducationAccordion');
+    safeRun(renderSkillsMarquee, 'SkillsMarquee');
+    safeRun(renderSkillsCategories, 'SkillsCategories');
+    safeRun(renderProjects, 'Projects');
+    safeRun(initProjectFilters, 'ProjectFilters');
+    safeRun(renderServices, 'Services');
+    safeRun(renderExperience, 'Experience');
+    safeRun(renderCredentials, 'Credentials');
+    safeRun(renderSocials, 'Socials');
+    safeRun(initContactForm, 'ContactForm');
 });
+
+function safeRun(fn, name) {
+    try {
+        fn();
+    } catch (e) {
+        console.error(`[Portfolio Execution Error] ${name}:`, e);
+    }
+}
 
 /* ----------------------------------------------------
    1. Custom Glowing Cursor
@@ -173,7 +181,7 @@ function renderEducationAccordion() {
                 <div class="p-6 pt-2 border-t border-borderSubtle/50 space-y-3">
                     <p class="text-xs md:text-sm text-mutedText leading-relaxed">${item.details}</p>
                     <div class="flex flex-wrap gap-2">
-                        ${item.highlights.map(h => `
+                        ${(item.highlights || []).map(h => `
                             <span class="px-3 py-1 rounded-full bg-cardDark border border-borderSubtle text-[11px] font-mono text-softCyan flex items-center gap-1.5">
                                 <i class="fa-solid fa-check text-[9px] text-accentLime"></i> ${h}
                             </span>
@@ -226,8 +234,8 @@ function renderSkillsMarquee() {
         </div>
     `).join('');
 
-    row1.innerHTML = itemsHtml;
-    row1Dup.innerHTML = itemsHtml;
+    if (row1) row1.innerHTML = itemsHtml;
+    if (row1Dup) row1Dup.innerHTML = itemsHtml;
 
     const itemsHtmlReverse = [...portfolioData.skillsMarquee].reverse().map(skill => `
         <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-cardDark/80 border border-borderSubtle text-sm font-display font-bold tracking-wider text-white/80 hover:text-accentLime hover:border-accentLime/50 transition-all cursor-default">
@@ -236,8 +244,8 @@ function renderSkillsMarquee() {
         </div>
     `).join('');
 
-    row2.innerHTML = itemsHtmlReverse;
-    row2Dup.innerHTML = itemsHtmlReverse;
+    if (row2) row2.innerHTML = itemsHtmlReverse;
+    if (row2Dup) row2Dup.innerHTML = itemsHtmlReverse;
 }
 
 function renderSkillsCategories() {
@@ -251,7 +259,7 @@ function renderSkillsCategories() {
                 ${cat.category}
             </h3>
             <div class="flex flex-wrap gap-2">
-                ${cat.skills.map(s => `
+                ${(cat.skills || []).map(s => `
                     <span class="px-3 py-1.5 rounded-xl bg-deepDark border border-borderSubtle text-xs font-mono text-mutedText hover:text-white hover:border-softCyan/30 transition-colors">
                         ${s}
                     </span>
@@ -321,7 +329,7 @@ function renderProjects(filter = 'all') {
 
             <!-- Footer Tech Tags -->
             <div class="px-6 pb-6 pt-2 flex flex-wrap items-center gap-1.5 border-t border-borderSubtle/50">
-                ${p.techStack.map(t => `
+                ${(p.techStack || []).map(t => `
                     <span class="px-2.5 py-1 rounded-lg bg-deepDark border border-borderSubtle text-[10px] font-mono text-mutedText">
                         ${t}
                     </span>
@@ -341,7 +349,10 @@ function renderProjects(filter = 'all') {
 }
 
 function initProjectFilters() {
-    const tabs = document.querySelectorAll('#project-filter-tabs .filter-btn');
+    const container = document.getElementById('project-filter-tabs');
+    if (!container) return;
+
+    const tabs = container.querySelectorAll('.filter-btn');
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             tabs.forEach(t => t.classList.remove('active'));
@@ -382,7 +393,7 @@ function openProjectModal(project) {
             <div class="space-y-2 pt-2">
                 <span class="text-xs font-mono text-white uppercase tracking-wider block">Technologies & Tools</span>
                 <div class="flex flex-wrap gap-2">
-                    ${project.techStack.map(t => `
+                    ${(project.techStack || []).map(t => `
                         <span class="px-3 py-1.5 rounded-xl bg-deepDark border border-borderSubtle text-xs font-mono text-softCyan">
                             ${t}
                         </span>
@@ -420,7 +431,7 @@ function openProjectModal(project) {
         document.body.style.overflow = '';
     };
 
-    closeBtn.onclick = closeModal;
+    if (closeBtn) closeBtn.onclick = closeModal;
     modal.onclick = (e) => {
         if (e.target === modal) closeModal();
     };
@@ -433,7 +444,7 @@ function renderServices() {
     const list = document.getElementById('services-list');
     if (!list) return;
 
-    list.innerHTML = portfolioData.services.map((s, idx) => `
+    list.innerHTML = (portfolioData.services || []).map((s, idx) => `
         <div class="p-8 rounded-3xl bg-cardDark border border-borderSubtle hover:border-softCyan/40 transition-all duration-300 space-y-4 group">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div class="flex items-center gap-4">
@@ -446,7 +457,7 @@ function renderServices() {
             </div>
             <p class="text-sm text-mutedText leading-relaxed">${s.desc}</p>
             <div class="flex flex-wrap gap-2 pt-2">
-                ${s.tags.map(t => `
+                ${(s.tags || []).map(t => `
                     <span class="px-3 py-1 rounded-full bg-deepDark text-[11px] font-mono text-mutedText">#${t}</span>
                 `).join('')}
             </div>
@@ -461,7 +472,7 @@ function renderExperience() {
     const container = document.getElementById('experience-list');
     if (!container) return;
 
-    container.innerHTML = portfolioData.experience.map((exp, idx) => `
+    container.innerHTML = (portfolioData.experience || []).map((exp, idx) => `
         <div class="p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-6 relative overflow-hidden">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-borderSubtle pb-6">
                 <div>
@@ -477,7 +488,7 @@ function renderExperience() {
             <p class="text-sm text-mutedText leading-relaxed">${exp.description}</p>
 
             <ul class="space-y-3">
-                ${exp.highlights.map(h => `
+                ${(exp.highlights || []).map(h => `
                     <li class="flex items-start gap-3 text-xs md:text-sm text-white/90 leading-relaxed">
                         <i class="fa-solid fa-circle-check text-softCyan mt-1 shrink-0 text-xs"></i>
                         <span>${h}</span>
@@ -486,7 +497,7 @@ function renderExperience() {
             </ul>
 
             <div class="flex flex-wrap gap-2 pt-2">
-                ${exp.skills.map(s => `
+                ${(exp.skills || []).map(s => `
                     <span class="px-3 py-1 rounded-xl bg-deepDark border border-borderSubtle text-xs font-mono text-softCyan">
                         ${s}
                     </span>
@@ -505,7 +516,7 @@ function renderCredentials() {
     const roleList = document.getElementById('roles-list');
 
     if (certList) {
-        certList.innerHTML = portfolioData.certifications.map(c => `
+        certList.innerHTML = (portfolioData.certifications || []).map(c => `
             <div class="p-5 rounded-2xl bg-cardDark border border-borderSubtle space-y-3">
                 <div class="flex items-center justify-between gap-4">
                     <div class="flex items-center gap-3">
@@ -538,21 +549,21 @@ function renderCredentials() {
     }
 
     if (badgeList) {
-        badgeList.innerHTML = badgeList.innerHTML = portfolioData.badges.map(b => `
+        badgeList.innerHTML = (portfolioData.badges || []).map(b => `
             <div class="p-4 rounded-2xl bg-cardDark border border-borderSubtle space-y-2 text-center">
                 <div class="w-10 h-10 mx-auto rounded-full bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan text-lg">
                     <i class="fa-solid fa-award"></i>
                 </div>
                 <h4 class="text-xs font-display font-bold text-white">${b.name}</h4>
                 <div class="flex items-center justify-center gap-1 text-accentLime text-xs">
-                    ${Array(b.stars).fill('<i class="fa-solid fa-star"></i>').join('')}
+                    ${Array(b.stars || 5).fill('<i class="fa-solid fa-star"></i>').join('')}
                 </div>
             </div>
         `).join('');
     }
 
     if (roleList) {
-        roleList.innerHTML = portfolioData.roles.map(r => `
+        roleList.innerHTML = (portfolioData.roles || []).map(r => `
             <div class="p-4 rounded-2xl bg-cardDark border border-borderSubtle flex items-center justify-between gap-4">
                 <div>
                     <h4 class="text-xs font-mono text-softCyan uppercase">${r.organization}</h4>
@@ -568,7 +579,7 @@ function renderSocials() {
     const curtainSocials = document.getElementById('curtain-socials');
     const footerSocials = document.getElementById('footer-social-links');
 
-    const html = portfolioData.socialHandles.map(s => `
+    const html = (portfolioData.socialHandles || []).map(s => `
         <a href="${s.url}" target="_blank" rel="noopener noreferrer" 
            class="px-4 py-2 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan hover:text-softCyan text-xs font-mono text-white transition-all">
             ${s.name} <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-1"></i>
