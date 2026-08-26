@@ -177,10 +177,71 @@
           <p class="uppercase tracking-wide">
             // HANG TIGHT, EXPLORER. THE DATA TRANSFER IS IN PROGRESS. IT MIGHT
             TAKE A MOMENT, BUT THE JOURNEY AHEAD IS WORTH THE WAIT...
-          </p>
-        </div>
       </div>
     </div>
+    <!-- Inline Self-Contained Preloader Engine (Guaranteed Execution on Deployed CDNs) -->
+    <script>
+      (function () {
+        const preloader = document.getElementById("initial-preloader");
+        if (!preloader) return;
+
+        // Prevent body scroll during preloader
+        document.body.style.overflow = "hidden";
+
+        const percentEl = document.getElementById("preloader-percent-num");
+        const steps = preloader.querySelectorAll(".preloader-step");
+        let currentPercent = 0;
+        const duration = 7000; // 7.0 seconds
+        const intervalTime = 30;
+        const totalTicks = Math.ceil(duration / intervalTime);
+        let tick = 0;
+        let dismissed = false;
+
+        function dismiss() {
+          if (dismissed) return;
+          dismissed = true;
+          preloader.classList.add("opacity-0", "pointer-events-none", "-translate-y-6");
+          setTimeout(function () {
+            preloader.style.display = "none";
+            document.body.style.overflow = "";
+          }, 700);
+        }
+
+        function update(percent) {
+          if (percentEl) percentEl.textContent = percent + "%";
+          steps.forEach(function (step) {
+            const min = parseInt(step.getAttribute("data-min"), 10);
+            const max = parseInt(step.getAttribute("data-max"), 10);
+            if (percent >= min && percent <= max) {
+              step.className =
+                "preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max bg-white text-deepDark font-bold shadow-lg scale-[1.02]";
+            } else if (percent > max) {
+              step.className =
+                "preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/70 font-medium";
+            } else {
+              step.className =
+                "preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/30";
+            }
+          });
+        }
+
+        const timer = setInterval(function () {
+          tick++;
+          const progress = tick / totalTicks;
+          const easedProgress = Math.min(1, Math.sin((progress * Math.PI) / 2));
+          currentPercent = Math.min(100, Math.floor(easedProgress * 100));
+          update(currentPercent);
+          if (tick >= totalTicks || currentPercent >= 100) {
+            clearInterval(timer);
+            update(100);
+            setTimeout(dismiss, 700);
+          }
+        }, intervalTime);
+
+        // Immediate hard fallback after 9 seconds under any conditions
+        setTimeout(dismiss, 9000);
+      })();
+    </script>
     <!-- Glowing Custom Cursor Halo -->
     <div
       id="custom-cursor"
@@ -1233,6 +1294,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="app.js"></script>
+    <script src="app.js?v=1.2"></script>
   </body>
 </html>

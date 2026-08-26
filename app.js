@@ -321,7 +321,7 @@ function initPreloader() {
     const preloader = document.getElementById('initial-preloader');
     const percentEl = document.getElementById('preloader-percent-num');
     const steps = document.querySelectorAll('.preloader-step');
-    if (!preloader) return;
+    if (!preloader || preloader.style.display === 'none' || preloader.classList.contains('opacity-0')) return;
 
     // Prevent background scrolling while loading
     document.body.style.overflow = 'hidden';
