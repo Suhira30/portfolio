@@ -85,6 +85,102 @@
   <body
     class="bg-deepDark text-white font-sans antialiased selection:bg-softCyan selection:text-deepDark overflow-x-hidden relative"
   >
+    <!-- Initial Terminal Preloader Overlay (Emotion Agency Style) -->
+    <div
+      id="initial-preloader"
+      class="fixed inset-0 z-[99999] bg-deepDark flex flex-col justify-center items-center px-6 sm:px-12 md:px-16 select-none transition-all duration-700 ease-in-out"
+    >
+      <!-- Ambient Radial Glows -->
+      <div
+        class="absolute inset-0 pointer-events-none overflow-hidden"
+        aria-hidden="true"
+      >
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-softCyan/10 rounded-full blur-[160px]"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accentLime/5 rounded-full blur-[130px]"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+      >
+        <!-- Left Column: Sequential Log Messages -->
+        <div
+          class="lg:col-span-5 space-y-2 font-mono text-xs sm:text-sm tracking-tight"
+          id="preloader-steps"
+        >
+          <div
+            class="preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/40"
+            data-min="0"
+            data-max="15"
+          >
+            // INITIALIZING BACKEND KERNEL...
+          </div>
+          <div
+            class="preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/40"
+            data-min="16"
+            data-max="35"
+          >
+            // LOADING SPRING BOOT &amp; REST APIS...
+          </div>
+          <div
+            class="preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/40"
+            data-min="36"
+            data-max="55"
+          >
+            // CONNECTING AWS DYNAMODB &amp; CLOUD STACK...
+          </div>
+          <div
+            class="preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/40"
+            data-min="56"
+            data-max="75"
+          >
+            // FETCHING SELECTED WORKS &amp; RESEARCH...
+          </div>
+          <div
+            class="preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/40"
+            data-min="76"
+            data-max="90"
+          >
+            // OPTIMIZING FRONTEND INTERFACES...
+          </div>
+          <div
+            class="preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/40"
+            data-min="91"
+            data-max="100"
+          >
+            // LAUNCHING SUHIRA BALARAJAN PORTFOLIO...
+          </div>
+        </div>
+
+        <!-- Center Column: Running Percentage -->
+        <div class="lg:col-span-3 text-center py-4 lg:py-0">
+          <div
+            class="font-mono text-xl sm:text-2xl md:text-3xl font-bold tracking-widest text-softCyan flex items-center justify-center gap-2"
+          >
+            <span>(</span>
+            <span
+              id="preloader-percent-num"
+              class="min-w-[4ch] text-center text-white"
+              >0%</span
+            >
+            <span>)</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Explorer Status Note -->
+        <div
+          class="lg:col-span-4 font-mono text-xs sm:text-sm text-white/70 leading-relaxed space-y-2"
+        >
+          <p class="uppercase tracking-wide">
+            // HANG TIGHT, EXPLORER. THE DATA TRANSFER IS IN PROGRESS. IT MIGHT
+            TAKE A MOMENT, BUT THE JOURNEY AHEAD IS WORTH THE WAIT...
+          </p>
+        </div>
+      </div>
+    </div>
     <!-- Glowing Custom Cursor Halo -->
     <div
       id="custom-cursor"

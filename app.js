@@ -283,7 +283,8 @@ const portfolioData = {
   ]
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+function startApp() {
+    safeRun(initPreloader, 'Preloader');
     safeRun(initCustomCursor, 'CustomCursor');
     safeRun(initCurtainMenu, 'CurtainMenu');
     safeRun(initHeroTyping, 'HeroTyping');
@@ -297,7 +298,13 @@ document.addEventListener('DOMContentLoaded', () => {
     safeRun(renderCredentials, 'Credentials');
     safeRun(renderSocials, 'Socials');
     safeRun(initContactForm, 'ContactForm');
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startApp);
+} else {
+    startApp();
+}
 
 function safeRun(fn, name) {
     try {
@@ -305,6 +312,73 @@ function safeRun(fn, name) {
     } catch (e) {
         console.error(`[Portfolio Execution Error] ${name}:`, e);
     }
+}
+
+/* ----------------------------------------------------
+   0. Initial Terminal Preloader (Emotion Agency Inspired)
+---------------------------------------------------- */
+function initPreloader() {
+    const preloader = document.getElementById('initial-preloader');
+    const percentEl = document.getElementById('preloader-percent-num');
+    const steps = document.querySelectorAll('.preloader-step');
+    if (!preloader) return;
+
+    // Prevent background scrolling while loading
+    document.body.style.overflow = 'hidden';
+
+    let currentPercent = 0;
+    const duration = 7000; // 7.0 seconds total animation time
+    const intervalTime = 30;
+    const totalTicks = Math.ceil(duration / intervalTime);
+    let tick = 0;
+    let dismissed = false;
+
+    function dismissPreloader() {
+        if (dismissed) return;
+        dismissed = true;
+        preloader.classList.add('opacity-0', 'pointer-events-none', '-translate-y-6');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+            document.body.style.overflow = '';
+        }, 700);
+    }
+
+    function updateSteps(percent) {
+        if (percentEl) {
+            percentEl.textContent = `${percent}%`;
+        }
+
+        steps.forEach(step => {
+            const min = parseInt(step.getAttribute('data-min'), 10);
+            const max = parseInt(step.getAttribute('data-max'), 10);
+
+            if (percent >= min && percent <= max) {
+                step.className = 'preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max bg-white text-deepDark font-bold shadow-lg scale-[1.02]';
+            } else if (percent > max) {
+                step.className = 'preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/70 font-medium';
+            } else {
+                step.className = 'preloader-step transition-all duration-200 py-1 px-2.5 rounded w-max text-white/30';
+            }
+        });
+    }
+
+    const timer = setInterval(() => {
+        tick++;
+        const progress = tick / totalTicks;
+        const easedProgress = Math.min(1, Math.sin((progress * Math.PI) / 2));
+        currentPercent = Math.min(100, Math.floor(easedProgress * 100));
+
+        updateSteps(currentPercent);
+
+        if (tick >= totalTicks || currentPercent >= 100) {
+            clearInterval(timer);
+            updateSteps(100);
+            setTimeout(dismissPreloader, 700);
+        }
+    }, intervalTime);
+
+    // Guaranteed safety fallback after 9 seconds
+    setTimeout(dismissPreloader, 9000);
 }
 
 /* ----------------------------------------------------
