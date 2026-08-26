@@ -177,6 +177,8 @@
           <p class="uppercase tracking-wide">
             // HANG TIGHT, EXPLORER. THE DATA TRANSFER IS IN PROGRESS. IT MIGHT
             TAKE A MOMENT, BUT THE JOURNEY AHEAD IS WORTH THE WAIT...
+          </p>
+        </div>
       </div>
     </div>
     <!-- Inline Self-Contained Preloader Engine (Guaranteed Execution on Deployed CDNs) -->
@@ -200,7 +202,11 @@
         function dismiss() {
           if (dismissed) return;
           dismissed = true;
-          preloader.classList.add("opacity-0", "pointer-events-none", "-translate-y-6");
+          preloader.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+            "-translate-y-6",
+          );
           setTimeout(function () {
             preloader.style.display = "none";
             document.body.style.overflow = "";
