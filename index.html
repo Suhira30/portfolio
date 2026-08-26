@@ -1,681 +1,1142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Suhira Balarajan | Software Engineer | Full Stack Developer | Backend
+      Specialist
+    </title>
+    <meta
+      name="description"
+      content="Personal portfolio of Suhira Balarajan - IT Graduate from University of Moratuwa with 6 months of production backend engineering experience at UK-based Smartzi Lanka. Spring Boot, React, AWS Specialist."
+    />
+    <meta
+      name="keywords"
+      content="Suhira Balarajan, Software Engineer, Full Stack Developer, Backend Specialist, University of Moratuwa, Smartzi Lanka, React, Spring Boot, AWS DynamoDB, UI UX Designer, Portfolio"
+    />
+    <meta name="author" content="Suhira Balarajan" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suhira Balarajan | Software Engineer | Full Stack Developer | Backend Specialist</title>
-    <meta name="description"
-        content="Personal portfolio of Suhira Balarajan - IT Graduate from University of Moratuwa with 6 months of production backend engineering experience at UK-based Smartzi Lanka. Spring Boot, React, AWS Specialist.">
-    <meta name="keywords"
-        content="Suhira Balarajan, Software Engineer, Full Stack Developer, Backend Specialist, University of Moratuwa, Smartzi Lanka, React, Spring Boot, AWS DynamoDB, UI UX Designer, Portfolio">
-    <meta name="author" content="Suhira Balarajan">
-    
     <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>"
+    />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        deepDark: '#0c0c0e',
-                        cardDark: 'hsl(225, 6.67%, 11.76%)',
-                        cardDarkHover: '#161822',
-                        softCyan: '#52b6d8',
-                        accentLime: '#a2e048',
-                        mutedText: 'rgba(255, 255, 255, 0.7)',
-                        borderSubtle: 'rgba(255, 255, 255, 0.08)'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Outfit', 'sans-serif']
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'spin-slow': 'spin 20s linear infinite',
-                        'marquee-left': 'marqueeLeft 35s linear infinite',
-                        'marquee-right': 'marqueeRight 35s linear infinite'
-                    },
-                    keyframes: {
-                        marqueeLeft: {
-                            '0%': { transform: 'translateX(0%)' },
-                            '100%': { transform: 'translateX(-50%)' }
-                        },
-                        marqueeRight: {
-                            '0%': { transform: 'translateX(-50%)' },
-                            '100%': { transform: 'translateX(0%)' }
-                        }
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              deepDark: "#0c0c0e",
+              cardDark: "hsl(225, 6.67%, 11.76%)",
+              cardDarkHover: "#161822",
+              softCyan: "#52b6d8",
+              accentLime: "#a2e048",
+              mutedText: "rgba(255, 255, 255, 0.7)",
+              borderSubtle: "rgba(255, 255, 255, 0.08)",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Outfit", "sans-serif"],
+            },
+            animation: {
+              "pulse-slow": "pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              "spin-slow": "spin 20s linear infinite",
+              "marquee-left": "marqueeLeft 35s linear infinite",
+              "marquee-right": "marqueeRight 35s linear infinite",
+            },
+            keyframes: {
+              marqueeLeft: {
+                "0%": { transform: "translateX(0%)" },
+                "100%": { transform: "translateX(-50%)" },
+              },
+              marqueeRight: {
+                "0%": { transform: "translateX(-50%)" },
+                "100%": { transform: "translateX(0%)" },
+              },
+            },
+          },
+        },
+      };
     </script>
 
     <!-- Modern Agency Custom Styles -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="bg-deepDark text-white font-sans antialiased selection:bg-softCyan selection:text-deepDark overflow-x-hidden relative">
-
+  <body
+    class="bg-deepDark text-white font-sans antialiased selection:bg-softCyan selection:text-deepDark overflow-x-hidden relative"
+  >
     <!-- Glowing Custom Cursor Halo -->
-    <div id="custom-cursor" class="fixed pointer-events-none z-50 w-8 h-8 rounded-full border border-softCyan/50 -translate-x-1/2 -translate-y-1/2 transition-transform duration-75 ease-out hidden md:block"></div>
-    <div id="custom-cursor-dot" class="fixed pointer-events-none z-50 w-2 h-2 rounded-full bg-softCyan -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-out hidden md:block"></div>
+    <div
+      id="custom-cursor"
+      class="fixed pointer-events-none z-50 w-8 h-8 rounded-full border border-softCyan/50 -translate-x-1/2 -translate-y-1/2 transition-transform duration-75 ease-out hidden md:block"
+    ></div>
+    <div
+      id="custom-cursor-dot"
+      class="fixed pointer-events-none z-50 w-2 h-2 rounded-full bg-softCyan -translate-x-1/2 -translate-y-1/2 transition-all duration-100 ease-out hidden md:block"
+    ></div>
 
     <!-- Ambient Glowing Background Radial Blobs -->
-    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-softCyan/15 rounded-full blur-[120px] animate-pulse-slow"></div>
-        <div class="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-accentLime/10 rounded-full blur-[140px] animate-pulse-slow"></div>
-        <div class="absolute -bottom-40 left-1/4 w-[600px] h-[600px] bg-softCyan/10 rounded-full blur-[150px] animate-pulse-slow"></div>
+    <div
+      class="fixed inset-0 pointer-events-none z-0 overflow-hidden"
+      aria-hidden="true"
+    >
+      <div
+        class="absolute -top-40 -left-40 w-96 h-96 bg-softCyan/15 rounded-full blur-[120px] animate-pulse-slow"
+      ></div>
+      <div
+        class="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-accentLime/10 rounded-full blur-[140px] animate-pulse-slow"
+      ></div>
+      <div
+        class="absolute -bottom-40 left-1/4 w-[600px] h-[600px] bg-softCyan/10 rounded-full blur-[150px] animate-pulse-slow"
+      ></div>
     </div>
 
     <!-- 1. Floating Header & Animated Navigation Curtain -->
-    <header class="fixed top-0 left-0 right-0 z-40 px-6 py-5 md:px-12 flex justify-between items-center transition-all duration-300 backdrop-blur-md bg-deepDark/60 border-b border-borderSubtle">
-        <!-- Floating Logo -->
-        <a href="#home" class="group flex items-center gap-3 text-xl font-display font-bold tracking-tight text-white">
-            <span class="w-9 h-9 rounded-full bg-gradient-to-tr from-softCyan to-accentLime flex items-center justify-center text-deepDark font-black text-sm group-hover:scale-105 transition-transform">
-                SB
-            </span>
-            <span class="group-hover:text-softCyan transition-colors">Suhira<span class="text-softCyan">.dev</span></span>
+    <header
+      class="fixed top-0 left-0 right-0 z-40 px-6 py-5 md:px-12 flex justify-between items-center transition-all duration-300 backdrop-blur-md bg-deepDark/60 border-b border-borderSubtle"
+    >
+      <!-- Floating Logo -->
+      <a
+        href="#home"
+        class="group flex items-center gap-3 text-xl font-display font-bold tracking-tight text-white"
+      >
+        <span
+          class="w-9 h-9 rounded-full bg-gradient-to-tr from-softCyan to-accentLime flex items-center justify-center text-deepDark font-black text-sm group-hover:scale-105 transition-transform"
+        >
+          SB
+        </span>
+        <span class="group-hover:text-softCyan transition-colors"
+          >Suhira<span class="text-softCyan">.dev</span></span
+        >
+      </a>
+
+      <!-- Floating Navigation CTAs & Menu Pill Button -->
+      <div class="flex items-center gap-4">
+        <a
+          href="https://drive.google.com/file/d/1NYe3eNWbbDtp9WfdQBdM_s9azxOP57Hh/view?usp=sharing"
+          target="_blank"
+          class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cardDark border border-borderSubtle text-xs font-semibold hover:border-softCyan hover:text-softCyan transition-all duration-300"
+        >
+          <i class="fa-solid fa-file-arrow-down text-softCyan"></i> Official CV
+          (PDF)
         </a>
 
-        <!-- Floating Navigation CTAs & Menu Pill Button -->
-        <div class="flex items-center gap-4">
-            <a href="https://drive.google.com/file/d/1NYe3eNWbbDtp9WfdQBdM_s9azxOP57Hh/view?usp=sharing" target="_blank" 
-               class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cardDark border border-borderSubtle text-xs font-semibold hover:border-softCyan hover:text-softCyan transition-all duration-300">
-                <i class="fa-solid fa-file-arrow-down text-softCyan"></i> Official CV (PDF)
-            </a>
-            
-            <!-- Menu Toggle Button -->
-            <button id="menu-toggle-btn" aria-label="Toggle Navigation Menu"
-                    class="group relative flex items-center gap-3 px-5 py-2.5 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan/50 transition-all duration-300 text-sm font-semibold tracking-wide cursor-pointer">
-                <span id="menu-btn-text">Menu</span>
-                <div class="w-5 h-4 flex flex-col justify-between items-end relative overflow-hidden pointer-events-none">
-                    <span class="w-full h-0.5 bg-white group-hover:bg-softCyan transition-all duration-300 menu-line-1"></span>
-                    <span class="w-3/4 h-0.5 bg-white group-hover:bg-softCyan transition-all duration-300 menu-line-2"></span>
-                    <span class="w-1/2 h-0.5 bg-white group-hover:bg-softCyan transition-all duration-300 menu-line-3"></span>
-                </div>
-            </button>
-        </div>
+        <!-- Menu Toggle Button -->
+        <button
+          id="menu-toggle-btn"
+          aria-label="Toggle Navigation Menu"
+          class="group relative flex items-center gap-3 px-5 py-2.5 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan/50 transition-all duration-300 text-sm font-semibold tracking-wide cursor-pointer"
+        >
+          <span id="menu-btn-text">Menu</span>
+          <div
+            class="w-5 h-4 flex flex-col justify-between items-end relative overflow-hidden pointer-events-none"
+          >
+            <span
+              class="w-full h-0.5 bg-white group-hover:bg-softCyan transition-all duration-300 menu-line-1"
+            ></span>
+            <span
+              class="w-3/4 h-0.5 bg-white group-hover:bg-softCyan transition-all duration-300 menu-line-2"
+            ></span>
+            <span
+              class="w-1/2 h-0.5 bg-white group-hover:bg-softCyan transition-all duration-300 menu-line-3"
+            ></span>
+          </div>
+        </button>
+      </div>
     </header>
 
     <!-- Full-Height Clip-Path Curtain Menu Modal (Scrollable & Responsive) -->
-    <div id="curtain-menu" class="fixed inset-0 z-30 bg-deepDark/95 backdrop-blur-2xl flex flex-col justify-between px-6 py-16 md:px-16 md:py-20 text-white transition-all duration-700 ease-in-out clip-curtain-closed overflow-y-auto">
-        <!-- Ambient Curtain Glow -->
-        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-softCyan/10 rounded-full blur-[140px] pointer-events-none"></div>
+    <div
+      id="curtain-menu"
+      class="fixed inset-0 z-30 bg-deepDark/95 backdrop-blur-2xl flex flex-col justify-between px-6 py-16 md:px-16 md:py-20 text-white transition-all duration-700 ease-in-out clip-curtain-closed overflow-y-auto"
+    >
+      <!-- Ambient Curtain Glow -->
+      <div
+        class="absolute top-1/4 right-1/4 w-96 h-96 bg-softCyan/10 rounded-full blur-[140px] pointer-events-none"
+      ></div>
 
-        <div class="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center my-auto relative z-10 pt-10 md:pt-0">
-            <!-- Navigation Links (Column 1 to 7) -->
-            <nav class="lg:col-span-7 flex flex-col gap-3 md:gap-4">
-                <span class="text-xs uppercase tracking-widest text-softCyan font-mono mb-1">Navigation Menu</span>
-                <a href="#home" class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer">
-                    <span class="text-xs font-mono text-softCyan pointer-events-none">01</span> Home
-                </a>
-                <a href="#about" class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer">
-                    <span class="text-xs font-mono text-softCyan pointer-events-none">02</span> About & Education
-                </a>
-                <a href="#skills" class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer">
-                    <span class="text-xs font-mono text-softCyan pointer-events-none">03</span> Technical Stack
-                </a>
-                <a href="#projects" class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer">
-                    <span class="text-xs font-mono text-softCyan pointer-events-none">04</span> Selected Works
-                </a>
-                <a href="#services" class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer">
-                    <span class="text-xs font-mono text-softCyan pointer-events-none">05</span> Services
-                </a>
-                <a href="#experience" class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer">
-                    <span class="text-xs font-mono text-softCyan pointer-events-none">06</span> Experience
-                </a>
-                <a href="#contact" class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer">
-                    <span class="text-xs font-mono text-softCyan pointer-events-none">07</span> Contact
-                </a>
-            </nav>
+      <div
+        class="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center my-auto relative z-10 pt-10 md:pt-0"
+      >
+        <!-- Navigation Links (Column 1 to 7) -->
+        <nav class="lg:col-span-7 flex flex-col gap-3 md:gap-4">
+          <span
+            class="text-xs uppercase tracking-widest text-softCyan font-mono mb-1"
+            >Navigation Menu</span
+          >
+          <a
+            href="#home"
+            class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer"
+          >
+            <span class="text-xs font-mono text-softCyan pointer-events-none"
+              >01</span
+            >
+            Home
+          </a>
+          <a
+            href="#about"
+            class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer"
+          >
+            <span class="text-xs font-mono text-softCyan pointer-events-none"
+              >02</span
+            >
+            About & Education
+          </a>
+          <a
+            href="#skills"
+            class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer"
+          >
+            <span class="text-xs font-mono text-softCyan pointer-events-none"
+              >03</span
+            >
+            Technical Stack
+          </a>
+          <a
+            href="#projects"
+            class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer"
+          >
+            <span class="text-xs font-mono text-softCyan pointer-events-none"
+              >04</span
+            >
+            Selected Works
+          </a>
+          <a
+            href="#services"
+            class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer"
+          >
+            <span class="text-xs font-mono text-softCyan pointer-events-none"
+              >05</span
+            >
+            Services
+          </a>
+          <a
+            href="#experience"
+            class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer"
+          >
+            <span class="text-xs font-mono text-softCyan pointer-events-none"
+              >06</span
+            >
+            Experience
+          </a>
+          <a
+            href="#contact"
+            class="curtain-link group text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-extrabold text-white/80 hover:text-white hover:translate-x-3 transition-all duration-300 flex items-center gap-3 cursor-pointer"
+          >
+            <span class="text-xs font-mono text-softCyan pointer-events-none"
+              >07</span
+            >
+            Contact
+          </a>
+        </nav>
 
-            <!-- Quick Contacts & Social Links (Column 8 to 12) -->
-            <div class="lg:col-span-5 space-y-6 lg:pl-10 border-t lg:border-t-0 lg:border-l border-borderSubtle pt-6 lg:pt-0">
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-mutedText font-mono block mb-1">Direct Contact</span>
-                    <a href="mailto:balarajansuhira@gmail.com" class="text-lg md:text-xl font-display font-semibold hover:text-softCyan transition-colors">balarajansuhira@gmail.com</a>
-                    <p class="text-mutedText text-xs mt-1">+94 76 642 05 54 • Colombo, Sri Lanka</p>
-                </div>
-                <div>
-                    <span class="text-xs uppercase tracking-widest text-mutedText font-mono block mb-3">Social Handles</span>
-                    <div class="flex flex-wrap gap-2.5" id="curtain-socials">
-                        <!-- Populated by JS -->
-                    </div>
-                </div>
-                <div class="p-5 rounded-2xl bg-cardDark border border-borderSubtle">
-                    <div class="flex items-center gap-2.5 text-accentLime text-xs font-mono font-semibold uppercase tracking-wider mb-1.5">
-                        <span class="w-2 h-2 rounded-full bg-accentLime animate-ping"></span>
-                        Seeking Software Engineer Roles
-                    </div>
-                    <p class="text-xs text-mutedText leading-relaxed">
-                        6 months of production backend engineering experience at Smartzi Lanka (UK-based). Specialized in Spring Boot, AWS DynamoDB, REST APIs, and React.
-                    </p>
-                </div>
+        <!-- Quick Contacts & Social Links (Column 8 to 12) -->
+        <div
+          class="lg:col-span-5 space-y-6 lg:pl-10 border-t lg:border-t-0 lg:border-l border-borderSubtle pt-6 lg:pt-0"
+        >
+          <div>
+            <span
+              class="text-xs uppercase tracking-widest text-mutedText font-mono block mb-1"
+              >Direct Contact</span
+            >
+            <a
+              href="mailto:balarajansuhira@gmail.com"
+              class="text-lg md:text-xl font-display font-semibold hover:text-softCyan transition-colors"
+              >balarajansuhira@gmail.com</a
+            >
+            <p class="text-mutedText text-xs mt-1">
+              +94 76 642 05 54 • Colombo, Sri Lanka
+            </p>
+          </div>
+          <div>
+            <span
+              class="text-xs uppercase tracking-widest text-mutedText font-mono block mb-3"
+              >Social Handles</span
+            >
+            <div class="flex flex-wrap gap-2.5" id="curtain-socials">
+              <!-- Populated by JS -->
             </div>
+          </div>
+          <div class="p-5 rounded-2xl bg-cardDark border border-borderSubtle">
+            <div
+              class="flex items-center gap-2.5 text-accentLime text-xs font-mono font-semibold uppercase tracking-wider mb-1.5"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-accentLime animate-ping"
+              ></span>
+              Seeking Software Engineer Roles
+            </div>
+            <p class="text-xs text-mutedText leading-relaxed">
+              6 months of production backend engineering experience at Smartzi
+              Lanka (UK-based). Specialized in Spring Boot, AWS DynamoDB, REST
+              APIs, and React.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- 2. Hero Section -->
-    <section id="home" class="min-h-screen pt-32 pb-20 px-6 md:px-12 flex flex-col justify-center items-center relative overflow-hidden">
-        <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
-            
-            <!-- Circular Profile Avatar with Soft Ambient Aura Glow (Shifted Upward) -->
-            <div class="space-y-4">
-                <div class="relative w-44 h-44 md:w-56 md:h-56 mx-auto group">
-                    <div class="absolute -inset-2 rounded-full bg-gradient-to-tr from-softCyan via-accentLime to-softCyan blur-xl opacity-60 group-hover:opacity-90 transition duration-1000 group-hover:duration-200 animate-spin-slow"></div>
-                    <div class="relative w-full h-full rounded-full overflow-hidden shadow-2xl bg-cardDark">
-                        <img src="assets/suhiraaaa.png" alt="Suhira Balarajan Avatar" class="w-full h-full object-cover object-[center_38%] scale-125 group-hover:scale-130 transition-transform duration-500">
-                    </div>
-                </div>
-
-                <!-- Specified Role Title Directly Below Picture -->
-                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cardDark/90 border border-softCyan/40 text-xs md:text-sm font-mono text-softCyan shadow-xl tracking-wide font-semibold">
-                    <i class="fa-solid fa-code text-accentLime"></i> Software Engineer | Full Stack Developer | Backend Specialist
-                </div>
+    <section
+      id="home"
+      class="min-h-screen pt-32 pb-20 px-6 md:px-12 flex flex-col justify-center items-center relative overflow-hidden"
+    >
+      <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
+        <!-- Circular Profile Avatar with Soft Ambient Aura Glow (Shifted Upward) -->
+        <div class="space-y-4">
+          <div class="relative w-44 h-44 md:w-56 md:h-56 mx-auto group">
+            <div
+              class="absolute -inset-2 rounded-full bg-gradient-to-tr from-softCyan via-accentLime to-softCyan blur-xl opacity-60 group-hover:opacity-90 transition duration-1000 group-hover:duration-200 animate-spin-slow"
+            ></div>
+            <div
+              class="relative w-full h-full rounded-full overflow-hidden shadow-2xl bg-cardDark"
+            >
+              <img
+                src="assets/suhiraaaa.png"
+                alt="Suhira Balarajan Avatar"
+                class="w-full h-full object-cover object-[center_38%] scale-125 group-hover:scale-130 transition-transform duration-500"
+              />
             </div>
+          </div>
 
-            <!-- Animated Heading Presentation -->
-            <div class="space-y-4 pt-2">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cardDark border border-borderSubtle text-xs font-mono text-softCyan tracking-wider uppercase">
-                    <span class="w-2 h-2 rounded-full bg-softCyan"></span> Hello! Welcome to my portfolio
-                </div>
-                
-                <h1 class="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold tracking-tight text-white leading-tight">
-                    I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-softCyan to-accentLime">Suhira Balarajan</span>
-                </h1>
-                
-                <!-- Typing & Staggered Role Presentation -->
-                <div class="text-xl sm:text-2xl md:text-3xl font-display font-medium text-mutedText flex items-center justify-center gap-2 h-10">
-                    <span>Specialized as a</span>
-                    <span id="hero-typing-role" class="text-softCyan font-semibold underline decoration-softCyan/40 underline-offset-8"></span>
-                    <span class="w-0.5 h-7 bg-softCyan animate-pulse"></span>
-                </div>
-            </div>
-
-            <!-- Subtitle Statement -->
-            <p class="max-w-3xl mx-auto text-mutedText text-base md:text-lg leading-relaxed font-light">
-                Information Technology Graduate from <strong class="text-white font-medium">University of Moratuwa</strong> with <strong class="text-white font-medium">6 months of production backend engineering experience</strong> at UK-based Smartzi Lanka. Specialized in building scalable REST APIs, microservices, AWS DynamoDB, and modern React applications.
-            </p>
-
-            <!-- Pill CTA Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-                <a href="#contact" class="px-8 py-4 rounded-full bg-gradient-to-r from-softCyan to-accentLime text-deepDark font-display font-bold text-sm tracking-wide shadow-lg shadow-softCyan/20 hover:shadow-softCyan/40 hover:scale-105 transition-all duration-300 flex items-center gap-3 group">
-                    <span>Let's Talk</span>
-                    <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                </a>
-                <a href="#projects" class="px-8 py-4 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan/50 text-white font-display font-semibold text-sm hover:text-softCyan hover:scale-105 transition-all duration-300 flex items-center gap-3">
-                    <span>View Projects</span>
-                    <i class="fa-solid fa-arrow-down-long text-softCyan"></i>
-                </a>
-            </div>
-
+          <!-- Specified Role Title Directly Below Picture -->
+          <div
+            class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-cardDark/90 border border-softCyan/40 text-xs md:text-sm font-mono text-softCyan shadow-xl tracking-wide font-semibold"
+          >
+            <i class="fa-solid fa-code text-accentLime"></i> Software Engineer |
+            Full Stack Developer | Backend Specialist
+          </div>
         </div>
+
+        <!-- Animated Heading Presentation -->
+        <div class="space-y-4 pt-2">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cardDark border border-borderSubtle text-xs font-mono text-softCyan tracking-wider uppercase"
+          >
+            <span class="w-2 h-2 rounded-full bg-softCyan"></span> Hello!
+            Welcome to my portfolio
+          </div>
+
+          <h1
+            class="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold tracking-tight text-white leading-tight"
+          >
+            I'm
+            <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-white via-softCyan to-accentLime"
+              >Suhira Balarajan</span
+            >
+          </h1>
+
+          <!-- Typing & Staggered Role Presentation -->
+          <div
+            class="text-xl sm:text-2xl md:text-3xl font-display font-medium text-mutedText flex items-center justify-center gap-2 h-10"
+          >
+            <span>Specialized as a</span>
+            <span
+              id="hero-typing-role"
+              class="text-softCyan font-semibold underline decoration-softCyan/40 underline-offset-8"
+            ></span>
+            <span class="w-0.5 h-7 bg-softCyan animate-pulse"></span>
+          </div>
+        </div>
+
+        <!-- Subtitle Statement -->
+        <p
+          class="max-w-3xl mx-auto text-mutedText text-base md:text-lg leading-relaxed font-light"
+        >
+          Information Technology Graduate from
+          <strong class="text-white font-medium">University of Moratuwa</strong>
+          with
+          <strong class="text-white font-medium"
+            >6 months of production backend engineering experience</strong
+          >
+          at UK-based Smartzi Lanka. Specialized in building scalable REST APIs,
+          microservices, AWS DynamoDB, and modern React applications.
+        </p>
+
+        <!-- Pill CTA Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a
+            href="#contact"
+            class="px-8 py-4 rounded-full bg-gradient-to-r from-softCyan to-accentLime text-deepDark font-display font-bold text-sm tracking-wide shadow-lg shadow-softCyan/20 hover:shadow-softCyan/40 hover:scale-105 transition-all duration-300 flex items-center gap-3 group"
+          >
+            <span>Let's Talk</span>
+            <i
+              class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"
+            ></i>
+          </a>
+          <a
+            href="#projects"
+            class="px-8 py-4 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan/50 text-white font-display font-semibold text-sm hover:text-softCyan hover:scale-105 transition-all duration-300 flex items-center gap-3"
+          >
+            <span>View Projects</span>
+            <i class="fa-solid fa-arrow-down-long text-softCyan"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- 3. About & Education Section -->
-    <section id="about" class="py-24 px-6 md:px-12 bg-cardDark/30 border-y border-borderSubtle relative">
-        <div class="max-w-7xl mx-auto space-y-16">
-            
-            <!-- Section Header -->
-            <div class="space-y-3 text-center md:text-left">
-                <span class="text-xs font-mono uppercase tracking-widest text-softCyan">About & Background</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
-                    Designing Digital Products With <span class="text-softCyan">Backend Precision</span>
-                </h2>
-            </div>
-
-            <!-- 2-Column Responsive Layout -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Left Column: Narrative Bio & Education Accordion -->
-                <div class="lg:col-span-7 space-y-10">
-                    <!-- Uppercase Bio Quote & Paragraph -->
-                    <div class="space-y-6">
-                        <blockquote class="text-xl md:text-2xl font-display font-semibold text-white/90 leading-snug border-l-4 border-softCyan pl-6 italic">
-                            "Specialized in building scalable REST APIs, microservices architectures, and cloud-native applications on AWS."
-                        </blockquote>
-                        
-                        <p class="text-mutedText text-base leading-relaxed font-light">
-                            Information Technology Graduate from <strong class="text-white">University of Moratuwa</strong> with <strong class="text-white">6 months of production backend engineering experience</strong> at UK-based company <strong class="text-white">Smartzi Lanka</strong>. Proficient in Java Spring Boot, React.js, AWS (DynamoDB, EC2, S3), microservices architectures, and modern DevOps practices.
-                        </p>
-
-                        <!-- Download CV & Highlight Cards -->
-                        <div class="flex flex-wrap items-center gap-4 pt-2">
-                            <a href="https://drive.google.com/file/d/1NYe3eNWbbDtp9WfdQBdM_s9azxOP57Hh/view?usp=sharing" target="_blank"
-                               class="px-6 py-3 rounded-full bg-softCyan text-deepDark font-display font-bold text-sm hover:bg-softCyan/90 transition-all flex items-center gap-2 shadow-lg shadow-softCyan/20">
-                                <i class="fa-solid fa-download"></i> Download CV (PDF)
-                            </a>
-                            <div class="px-4 py-2.5 rounded-full bg-cardDark border border-borderSubtle text-xs text-mutedText flex items-center gap-2">
-                                <i class="fa-solid fa-location-dot text-softCyan"></i> Colombo, Sri Lanka
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Education Accordion -->
-                    <div class="space-y-4 pt-6">
-                        <h3 class="text-xs font-mono uppercase tracking-widest text-accentLime">Education Milestones</h3>
-                        <div class="space-y-4" id="education-accordion">
-                            <!-- Populated dynamically via JS -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Sticky Profile Showcase Card (Shifted Upward framing) -->
-                <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
-                    <div class="p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-6 relative overflow-hidden shadow-2xl group">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-softCyan/10 rounded-full blur-2xl group-hover:bg-softCyan/20 transition-all"></div>
-                        
-                        <div class="aspect-square rounded-2xl overflow-hidden border border-borderSubtle bg-deepDark">
-                            <img src="assets/suhiraaaa.png" alt="Suhira Balarajan Showcase" class="w-full h-full object-cover object-[center_38%] scale-125 group-hover:scale-130 transition-transform duration-700">
-                        </div>
-
-                        <div class="space-y-3">
-                            <h3 class="text-2xl font-display font-bold text-white">Suhira Balarajan</h3>
-                            <p class="text-sm font-mono text-softCyan">Software Engineer | Full Stack Developer | Backend Specialist</p>
-                            <p class="text-xs text-mutedText leading-relaxed">
-                                BSc (Hons) IT Graduate from University of Moratuwa (CGPA 3.47). Experienced in Spring Boot, AWS DynamoDB, REST APIs, and React.
-                            </p>
-                        </div>
-
-                        <!-- Highlights Grid -->
-                        <div class="grid grid-cols-2 gap-3 pt-2">
-                            <div class="p-3 rounded-xl bg-deepDark/60 border border-borderSubtle">
-                                <span class="text-xs font-mono text-mutedText block">Degree</span>
-                                <span class="text-xs font-semibold text-white">BSc (Hons) IT</span>
-                            </div>
-                            <div class="p-3 rounded-xl bg-deepDark/60 border border-borderSubtle">
-                                <span class="text-xs font-mono text-mutedText block">CGPA</span>
-                                <span class="text-xs font-semibold text-accentLime">3.47 / 4.0</span>
-                            </div>
-                            <div class="p-3 rounded-xl bg-deepDark/60 border border-borderSubtle">
-                                <span class="text-xs font-mono text-mutedText block">Experience</span>
-                                <span class="text-xs font-semibold text-white">6 Mos @ Smartzi</span>
-                            </div>
-                            <div class="p-3 rounded-xl bg-deepDark/60 border border-borderSubtle">
-                                <span class="text-xs font-mono text-mutedText block">Status</span>
-                                <span class="text-xs font-semibold text-softCyan">Seeking Roles</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <section
+      id="about"
+      class="py-24 px-6 md:px-12 bg-cardDark/30 border-y border-borderSubtle relative"
+    >
+      <div class="max-w-7xl mx-auto space-y-16">
+        <!-- Section Header -->
+        <div class="space-y-3 text-center md:text-left">
+          <span
+            class="text-xs font-mono uppercase tracking-widest text-softCyan"
+            >About & Background</span
+          >
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
+            Designing Digital Products With
+            <span class="text-softCyan">Backend Precision</span>
+          </h2>
         </div>
+
+        <!-- 2-Column Responsive Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Left Column: Narrative Bio & Education Accordion -->
+          <div class="lg:col-span-7 space-y-10">
+            <!-- Uppercase Bio Quote & Paragraph -->
+            <div class="space-y-6">
+              <blockquote
+                class="text-xl md:text-2xl font-display font-semibold text-white/90 leading-snug border-l-4 border-softCyan pl-6 italic"
+              >
+                "Specialized in building scalable REST APIs, microservices
+                architectures, and cloud-native applications on AWS."
+              </blockquote>
+
+              <p class="text-mutedText text-base leading-relaxed font-light">
+                Information Technology Graduate from
+                <strong class="text-white">University of Moratuwa</strong> with
+                <strong class="text-white"
+                  >6 months of production backend engineering experience</strong
+                >
+                at UK-based company
+                <strong class="text-white">Smartzi Lanka</strong>. Proficient in
+                Java Spring Boot, React.js, AWS (DynamoDB, EC2, S3),
+                microservices architectures, and modern DevOps practices.
+              </p>
+
+              <!-- Download CV & Highlight Cards -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  href="https://drive.google.com/file/d/1NYe3eNWbbDtp9WfdQBdM_s9azxOP57Hh/view?usp=sharing"
+                  target="_blank"
+                  class="px-6 py-3 rounded-full bg-softCyan text-deepDark font-display font-bold text-sm hover:bg-softCyan/90 transition-all flex items-center gap-2 shadow-lg shadow-softCyan/20"
+                >
+                  <i class="fa-solid fa-download"></i> Download CV (PDF)
+                </a>
+                <div
+                  class="px-4 py-2.5 rounded-full bg-cardDark border border-borderSubtle text-xs text-mutedText flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-location-dot text-softCyan"></i>
+                  Colombo, Sri Lanka
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Accordion -->
+            <div class="space-y-4 pt-6">
+              <h3
+                class="text-xs font-mono uppercase tracking-widest text-accentLime"
+              >
+                Education Milestones
+              </h3>
+              <div class="space-y-4" id="education-accordion">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Sticky Profile Showcase Card (Shifted Upward framing) -->
+          <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+            <div
+              class="p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-6 relative overflow-hidden shadow-2xl group"
+            >
+              <div
+                class="absolute top-0 right-0 w-32 h-32 bg-softCyan/10 rounded-full blur-2xl group-hover:bg-softCyan/20 transition-all"
+              ></div>
+
+              <div
+                class="aspect-square rounded-2xl overflow-hidden border border-borderSubtle bg-deepDark"
+              >
+                <img
+                  src="assets/suhiraaaa.png"
+                  alt="Suhira Balarajan Showcase"
+                  class="w-full h-full object-cover object-[center_38%] scale-125 group-hover:scale-130 transition-transform duration-700"
+                />
+              </div>
+
+              <div class="space-y-3">
+                <h3 class="text-2xl font-display font-bold text-white">
+                  Suhira Balarajan
+                </h3>
+                <p class="text-sm font-mono text-softCyan">
+                  Software Engineer | Full Stack Developer | Backend Specialist
+                </p>
+                <p class="text-xs text-mutedText leading-relaxed">
+                  BSc (Hons) IT Graduate from University of Moratuwa (CGPA
+                  3.47). Experienced in Spring Boot, AWS DynamoDB, REST APIs,
+                  and React.
+                </p>
+              </div>
+
+              <!-- Highlights Grid -->
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div
+                  class="p-3 rounded-xl bg-deepDark/60 border border-borderSubtle"
+                >
+                  <span class="text-xs font-mono text-mutedText block"
+                    >Degree</span
+                  >
+                  <span class="text-xs font-semibold text-white"
+                    >BSc (Hons) IT</span
+                  >
+                </div>
+                <div
+                  class="p-3 rounded-xl bg-deepDark/60 border border-borderSubtle"
+                >
+                  <span class="text-xs font-mono text-mutedText block"
+                    >CGPA</span
+                  >
+                  <span class="text-xs font-semibold text-accentLime"
+                    >3.47 / 4.0</span
+                  >
+                </div>
+                <div
+                  class="p-3 rounded-xl bg-deepDark/60 border border-borderSubtle"
+                >
+                  <span class="text-xs font-mono text-mutedText block"
+                    >Experience</span
+                  >
+                  <span class="text-xs font-semibold text-white"
+                    >6 Mos @ Smartzi</span
+                  >
+                </div>
+                <div
+                  class="p-3 rounded-xl bg-deepDark/60 border border-borderSubtle"
+                >
+                  <span class="text-xs font-mono text-mutedText block"
+                    >Status</span
+                  >
+                  <span class="text-xs font-semibold text-softCyan"
+                    >Seeking Roles</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 4. Interactive Skills Marquee -->
     <section id="skills" class="py-20 bg-deepDark overflow-hidden relative">
-        <div class="space-y-12">
-            <!-- Section Header -->
-            <div class="max-w-7xl mx-auto px-6 md:px-12 text-center space-y-3">
-                <span class="text-xs font-mono uppercase tracking-widest text-softCyan">Tech Stack & Expertise</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
-                    Mastered Technologies & Frameworks
-                </h2>
-            </div>
-
-            <!-- Dual Row Infinite Scrolling Parallax Marquee -->
-            <div class="space-y-4 py-4">
-                <!-- Row 1: Left to Right -->
-                <div class="flex overflow-hidden select-none mask-gradient">
-                    <div class="flex gap-6 animate-marquee-left whitespace-nowrap py-2" id="marquee-row-1">
-                        <!-- Populated by JS -->
-                    </div>
-                    <div class="flex gap-6 animate-marquee-left whitespace-nowrap py-2" aria-hidden="true" id="marquee-row-1-dup">
-                        <!-- Duplicate for seamless infinite loop -->
-                    </div>
-                </div>
-
-                <!-- Row 2: Right to Left -->
-                <div class="flex overflow-hidden select-none mask-gradient">
-                    <div class="flex gap-6 animate-marquee-right whitespace-nowrap py-2" id="marquee-row-2">
-                        <!-- Populated by JS -->
-                    </div>
-                    <div class="flex gap-6 animate-marquee-right whitespace-nowrap py-2" aria-hidden="true" id="marquee-row-2-dup">
-                        <!-- Duplicate for seamless infinite loop -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Categorized Skills Grid -->
-            <div class="max-w-7xl mx-auto px-6 md:px-12 pt-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="skills-category-grid">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
+      <div class="space-y-12">
+        <!-- Section Header -->
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center space-y-3">
+          <span
+            class="text-xs font-mono uppercase tracking-widest text-softCyan"
+            >Tech Stack & Expertise</span
+          >
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
+            Mastered Technologies & Frameworks
+          </h2>
         </div>
+
+        <!-- Dual Row Infinite Scrolling Parallax Marquee -->
+        <div class="space-y-4 py-4">
+          <!-- Row 1: Left to Right -->
+          <div class="flex overflow-hidden select-none mask-gradient">
+            <div
+              class="flex gap-6 animate-marquee-left whitespace-nowrap py-2"
+              id="marquee-row-1"
+            >
+              <!-- Populated by JS -->
+            </div>
+            <div
+              class="flex gap-6 animate-marquee-left whitespace-nowrap py-2"
+              aria-hidden="true"
+              id="marquee-row-1-dup"
+            >
+              <!-- Duplicate for seamless infinite loop -->
+            </div>
+          </div>
+
+          <!-- Row 2: Right to Left -->
+          <div class="flex overflow-hidden select-none mask-gradient">
+            <div
+              class="flex gap-6 animate-marquee-right whitespace-nowrap py-2"
+              id="marquee-row-2"
+            >
+              <!-- Populated by JS -->
+            </div>
+            <div
+              class="flex gap-6 animate-marquee-right whitespace-nowrap py-2"
+              aria-hidden="true"
+              id="marquee-row-2-dup"
+            >
+              <!-- Duplicate for seamless infinite loop -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Categorized Skills Grid -->
+        <div class="max-w-7xl mx-auto px-6 md:px-12 pt-8">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            id="skills-category-grid"
+          >
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 5. Selected Works / Projects Section -->
-    <section id="projects" class="py-24 px-6 md:px-12 bg-cardDark/20 border-t border-borderSubtle relative">
-        <div class="max-w-7xl mx-auto space-y-12">
-            
-            <!-- Section Header & Filter Tabs -->
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-borderSubtle pb-8">
-                <div class="space-y-2">
-                    <span class="text-xs font-mono uppercase tracking-widest text-softCyan">Featured Projects</span>
-                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
-                        Selected Works
-                    </h2>
-                </div>
+    <section
+      id="projects"
+      class="py-24 px-6 md:px-12 bg-cardDark/20 border-t border-borderSubtle relative"
+    >
+      <div class="max-w-7xl mx-auto space-y-12">
+        <!-- Section Header & Filter Tabs -->
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-borderSubtle pb-8"
+        >
+          <div class="space-y-2">
+            <span
+              class="text-xs font-mono uppercase tracking-widest text-softCyan"
+              >Featured Projects</span
+            >
+            <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
+              Selected Works
+            </h2>
+          </div>
 
-                <!-- Category Filter Pills -->
-                <div class="flex flex-wrap gap-2" id="project-filter-tabs">
-                    <button data-filter="all" class="filter-btn active px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all">All Projects</button>
-                    <button data-filter="ai" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all">AI / ML Research</button>
-                    <button data-filter="fullstack" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all">Full-Stack</button>
-                    <button data-filter="microservices" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all">Microservices</button>
-                    <button data-filter="hardware" class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all">Hardware & IoT</button>
-                </div>
-            </div>
-
-            <!-- Project Grid (2 cols mobile, 3 cols desktop) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
-                <!-- Project cards populated dynamically via JS -->
-            </div>
-
+          <!-- Category Filter Pills -->
+          <div class="flex flex-wrap gap-2" id="project-filter-tabs">
+            <button
+              data-filter="all"
+              class="filter-btn active px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all"
+            >
+              All Projects
+            </button>
+            <button
+              data-filter="ai"
+              class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all"
+            >
+              AI / ML Research
+            </button>
+            <button
+              data-filter="fullstack"
+              class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all"
+            >
+              Full-Stack
+            </button>
+            <button
+              data-filter="microservices"
+              class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all"
+            >
+              Microservices
+            </button>
+            <button
+              data-filter="hardware"
+              class="filter-btn px-5 py-2 rounded-full text-xs font-semibold bg-cardDark border border-borderSubtle hover:border-softCyan transition-all"
+            >
+              Hardware & IoT
+            </button>
+          </div>
         </div>
+
+        <!-- Project Grid (2 cols mobile, 3 cols desktop) -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="projects-grid"
+        >
+          <!-- Project cards populated dynamically via JS -->
+        </div>
+      </div>
     </section>
 
     <!-- Project Detail Popup Dialog Modal Overlay -->
-    <div id="project-modal" class="hidden fixed inset-0 z-50 bg-deepDark/90 backdrop-blur-xl flex items-center justify-center p-4 md:p-10 opacity-0 pointer-events-none transition-all duration-300">
-        <div class="bg-cardDark border border-borderSubtle rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-10 relative space-y-8 shadow-2xl custom-scrollbar">
-            <!-- Close Button -->
-            <button id="close-modal-btn" aria-label="Close project modal" class="absolute top-6 right-6 w-10 h-10 rounded-full bg-deepDark border border-borderSubtle flex items-center justify-center text-mutedText hover:text-white hover:border-softCyan transition-all">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
+    <div
+      id="project-modal"
+      class="hidden fixed inset-0 z-50 bg-deepDark/90 backdrop-blur-xl flex items-center justify-center p-4 md:p-10 opacity-0 pointer-events-none transition-all duration-300"
+    >
+      <div
+        class="bg-cardDark border border-borderSubtle rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 md:p-10 relative space-y-8 shadow-2xl custom-scrollbar"
+      >
+        <!-- Close Button -->
+        <button
+          id="close-modal-btn"
+          aria-label="Close project modal"
+          class="absolute top-6 right-6 w-10 h-10 rounded-full bg-deepDark border border-borderSubtle flex items-center justify-center text-mutedText hover:text-white hover:border-softCyan transition-all"
+        >
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
 
-            <!-- Modal Content (JS Populated) -->
-            <div id="modal-content-body" class="space-y-6">
-                <!-- Content inserted via JS -->
-            </div>
+        <!-- Modal Content (JS Populated) -->
+        <div id="modal-content-body" class="space-y-6">
+          <!-- Content inserted via JS -->
         </div>
-    </section>
+      </div>
+    </div>
 
     <!-- 6. Services Section -->
-    <section id="services" class="py-24 px-6 md:px-12 bg-deepDark border-t border-borderSubtle relative">
-        <div class="max-w-7xl mx-auto space-y-16">
-            
-            <div class="max-w-2xl space-y-3">
-                <span class="text-xs font-mono uppercase tracking-widest text-softCyan">Services & Solutions</span>
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
-                    Here's How I Can Help You Build & Scale
-                </h2>
-            </div>
-
-            <!-- Interactive List of Services -->
-            <div class="space-y-6" id="services-list">
-                <!-- Populated dynamically via JS -->
-            </div>
-
-            <!-- Services CTA -->
-            <div class="p-8 rounded-3xl bg-gradient-to-r from-cardDark via-cardDark to-softCyan/10 border border-borderSubtle flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="space-y-2 text-center md:text-left">
-                    <h3 class="text-2xl font-display font-bold text-white">Have a project or engineering role in mind?</h3>
-                    <p class="text-sm text-mutedText">I am ready to bring high-performance solutions to your team.</p>
-                </div>
-                <a href="#contact" class="px-8 py-4 rounded-full bg-softCyan text-deepDark font-display font-bold text-sm shadow-lg shadow-softCyan/20 hover:scale-105 transition-all">
-                    Discuss The Project
-                </a>
-            </div>
-
+    <section
+      id="services"
+      class="py-24 px-6 md:px-12 bg-deepDark border-t border-borderSubtle relative"
+    >
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="max-w-2xl space-y-3">
+          <span
+            class="text-xs font-mono uppercase tracking-widest text-softCyan"
+            >Services & Solutions</span
+          >
+          <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
+            Here's How I Can Help You Build & Scale
+          </h2>
         </div>
+
+        <!-- Interactive List of Services -->
+        <div class="space-y-6" id="services-list">
+          <!-- Populated dynamically via JS -->
+        </div>
+
+        <!-- Services CTA -->
+        <div
+          class="p-8 rounded-3xl bg-gradient-to-r from-cardDark via-cardDark to-softCyan/10 border border-borderSubtle flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <div class="space-y-2 text-center md:text-left">
+            <h3 class="text-2xl font-display font-bold text-white">
+              Have a project or engineering role in mind?
+            </h3>
+            <p class="text-sm text-mutedText">
+              I am ready to bring high-performance solutions to your team.
+            </p>
+          </div>
+          <a
+            href="#contact"
+            class="px-8 py-4 rounded-full bg-softCyan text-deepDark font-display font-bold text-sm shadow-lg shadow-softCyan/20 hover:scale-105 transition-all"
+          >
+            Discuss The Project
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- 7. Work Experience History Section -->
-    <section id="experience" class="py-24 px-6 md:px-12 bg-cardDark/30 border-t border-borderSubtle relative">
-        <div class="max-w-7xl mx-auto space-y-16">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-borderSubtle pb-8">
-                <div class="space-y-2">
-                    <span class="text-xs font-mono uppercase tracking-widest text-softCyan">Career Path</span>
-                    <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
-                        Work Experience & History
-                    </h2>
-                </div>
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cardDark border border-accentLime/40 text-accentLime text-xs font-mono">
-                    <span class="w-2 h-2 rounded-full bg-accentLime animate-ping"></span> Available for Immediate Roles
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Left: Expandable Work Experience Accordion -->
-                <div class="lg:col-span-8 space-y-6" id="experience-list">
-                    <!-- Populated dynamically via JS -->
-                </div>
-
-                <!-- Right: Open to Opportunities Showcase -->
-                <div class="lg:col-span-4 p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-6 relative overflow-hidden">
-                    <div class="w-14 h-14 rounded-2xl bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan text-2xl">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </div>
-
-                    <div class="space-y-3">
-                        <h3 class="text-2xl font-display font-bold text-white">Open to Opportunities</h3>
-                        <p class="text-sm text-mutedText leading-relaxed">
-                            Interested in Software Engineer, Full-Stack Developer, and Backend Engineering positions. 6 months production experience in Spring Boot, REST APIs, DynamoDB, AWS, and React.
-                        </p>
-                    </div>
-
-                    <div class="space-y-3 pt-2">
-                        <div class="flex items-center gap-3 text-xs text-mutedText">
-                            <i class="fa-solid fa-check text-accentLime"></i> Immediate Joining Availability
-                        </div>
-                        <div class="flex items-center gap-3 text-xs text-mutedText">
-                            <i class="fa-solid fa-check text-accentLime"></i> Remote / Hybrid / On-site Relocation
-                        </div>
-                        <div class="flex items-center gap-3 text-xs text-mutedText">
-                            <i class="fa-solid fa-check text-accentLime"></i> B2B Integration & Cloud Expertise
-                        </div>
-                    </div>
-
-                    <a href="#contact" class="w-full py-3.5 rounded-full bg-cardDark border border-softCyan/50 text-softCyan hover:bg-softCyan hover:text-deepDark font-display font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2">
-                        <span>Get In Touch</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-
-            </div>
-
+    <section
+      id="experience"
+      class="py-24 px-6 md:px-12 bg-cardDark/30 border-t border-borderSubtle relative"
+    >
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-borderSubtle pb-8"
+        >
+          <div class="space-y-2">
+            <span
+              class="text-xs font-mono uppercase tracking-widest text-softCyan"
+              >Career Path</span
+            >
+            <h2 class="text-3xl md:text-5xl font-display font-bold text-white">
+              Work Experience & History
+            </h2>
+          </div>
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cardDark border border-accentLime/40 text-accentLime text-xs font-mono"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-accentLime animate-ping"
+            ></span>
+            Available for Immediate Roles
+          </div>
         </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Left: Expandable Work Experience Accordion -->
+          <div class="lg:col-span-8 space-y-6" id="experience-list">
+            <!-- Populated dynamically via JS -->
+          </div>
+
+          <!-- Right: Open to Opportunities Showcase -->
+          <div
+            class="lg:col-span-4 p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-6 relative overflow-hidden"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan text-2xl"
+            >
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="text-2xl font-display font-bold text-white">
+                Open to Opportunities
+              </h3>
+              <p class="text-sm text-mutedText leading-relaxed">
+                Interested in Software Engineer, Full-Stack Developer, and
+                Backend Engineering positions. 6 months production experience in
+                Spring Boot, REST APIs, DynamoDB, AWS, and React.
+              </p>
+            </div>
+
+            <div class="space-y-3 pt-2">
+              <div class="flex items-center gap-3 text-xs text-mutedText">
+                <i class="fa-solid fa-check text-accentLime"></i> Immediate
+                Joining Availability
+              </div>
+              <div class="flex items-center gap-3 text-xs text-mutedText">
+                <i class="fa-solid fa-check text-accentLime"></i> Remote /
+                Hybrid / On-site Relocation
+              </div>
+              <div class="flex items-center gap-3 text-xs text-mutedText">
+                <i class="fa-solid fa-check text-accentLime"></i> B2B
+                Integration & Cloud Expertise
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              class="w-full py-3.5 rounded-full bg-cardDark border border-softCyan/50 text-softCyan hover:bg-softCyan hover:text-deepDark font-display font-bold text-sm transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <span>Get In Touch</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 8. Achievements & Leadership Roles Section -->
-    <section id="credentials" class="py-24 px-6 md:px-12 bg-deepDark border-t border-borderSubtle relative">
-        <div class="max-w-7xl mx-auto space-y-16">
-            
-            <div class="space-y-2 text-center md:text-left">
-                <span class="text-xs font-mono uppercase tracking-widest text-softCyan">Recognition & Extracurriculars</span>
-                <h2 class="text-3xl md:text-5xl font-bold text-white font-display">
-                    Certifications, Badges & Leadership
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                
-                <!-- Certifications Column -->
-                <div class="lg:col-span-7 space-y-6">
-                    <h3 class="text-lg font-display font-semibold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-award text-softCyan"></i> Verified Certifications
-                    </h3>
-
-                    <div class="space-y-3" id="certifications-list">
-                        <!-- Populated dynamically via JS -->
-                    </div>
-                </div>
-
-                <!-- Badges & Roles Column -->
-                <div class="lg:col-span-5 space-y-8">
-                    <!-- Featured Badges -->
-                    <div class="space-y-4">
-                        <h3 class="text-lg font-display font-semibold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-star text-accentLime"></i> Skill Badges
-                        </h3>
-                        <div class="grid grid-cols-2 gap-4" id="badges-list">
-                            <!-- Populated dynamically via JS -->
-                        </div>
-                    </div>
-
-                    <!-- Leadership & Roles -->
-                    <div class="space-y-4">
-                        <h3 class="text-lg font-display font-semibold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-users text-softCyan"></i> Leadership & Extracurriculars
-                        </h3>
-                        <div class="space-y-3" id="roles-list">
-                            <!-- Populated dynamically via JS -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+    <section
+      id="credentials"
+      class="py-24 px-6 md:px-12 bg-deepDark border-t border-borderSubtle relative"
+    >
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="space-y-2 text-center md:text-left">
+          <span
+            class="text-xs font-mono uppercase tracking-widest text-softCyan"
+            >Recognition & Extracurriculars</span
+          >
+          <h2 class="text-3xl md:text-5xl font-bold text-white font-display">
+            Certifications, Badges & Leadership
+          </h2>
         </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- Certifications Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <h3
+              class="text-lg font-display font-semibold text-white flex items-center gap-2"
+            >
+              <i class="fa-solid fa-award text-softCyan"></i> Verified
+              Certifications
+            </h3>
+
+            <div class="space-y-3" id="certifications-list">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+
+          <!-- Badges & Roles Column -->
+          <div class="lg:col-span-5 space-y-8">
+            <!-- Featured Badges -->
+            <div class="space-y-4">
+              <h3
+                class="text-lg font-display font-semibold text-white flex items-center gap-2"
+              >
+                <i class="fa-solid fa-star text-accentLime"></i> Skill Badges
+              </h3>
+              <div class="grid grid-cols-2 gap-4" id="badges-list">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+
+            <!-- Leadership & Roles -->
+            <div class="space-y-4">
+              <h3
+                class="text-lg font-display font-semibold text-white flex items-center gap-2"
+              >
+                <i class="fa-solid fa-users text-softCyan"></i> Leadership &
+                Extracurriculars
+              </h3>
+              <div class="space-y-3" id="roles-list">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 9. Contact & Footer Section -->
-    <section id="contact" class="py-24 px-6 md:px-12 bg-cardDark/40 border-t border-borderSubtle relative">
-        <div class="max-w-7xl mx-auto space-y-16">
-            
-            <div class="max-w-3xl space-y-4 text-center md:text-left">
-                <span class="text-xs font-mono uppercase tracking-widest text-softCyan">Let's Connect</span>
-                <h2 class="text-3xl md:text-6xl font-display font-extrabold text-white leading-tight">
-                    Interested in talking? <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-softCyan to-accentLime">Let’s do it.</span>
-                </h2>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Contact Form (Left Column) -->
-                <div class="lg:col-span-7 p-8 md:p-10 rounded-3xl bg-cardDark border border-borderSubtle space-y-6 shadow-2xl relative">
-                    
-                    <form id="portfolio-contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
-                        <!-- Web3Forms Access Key -->
-                        <input type="hidden" name="access_key" value="e7f2b66c-a813-41d2-8aa4-1881a7329a70">
-                        <input type="hidden" name="subject" value="New Portfolio Message for Suhira Balarajan!">
-                        <input type="hidden" name="from_name" value="Suhira Portfolio Visitor">
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label for="name" class="text-xs font-mono text-mutedText uppercase">Full Name</label>
-                                <input type="text" id="name" name="name" required placeholder="John Doe"
-                                       class="w-full px-4 py-3.5 rounded-xl bg-deepDark border border-borderSubtle focus:border-softCyan focus:outline-none text-white text-sm transition-all">
-                            </div>
-                            <div class="space-y-2">
-                                <label for="email" class="text-xs font-mono text-mutedText uppercase">Email Address</label>
-                                <input type="email" id="email" name="email" required placeholder="john@example.com"
-                                       class="w-full px-4 py-3.5 rounded-xl bg-deepDark border border-borderSubtle focus:border-softCyan focus:outline-none text-white text-sm transition-all">
-                            </div>
-                        </div>
-
-                        <div class="space-y-2">
-                            <label for="subject" class="text-xs font-mono text-mutedText uppercase">Subject</label>
-                            <input type="text" id="subject" name="subject_text" required placeholder="Job Opportunity / Project Inquiry"
-                                   class="w-full px-4 py-3.5 rounded-xl bg-deepDark border border-borderSubtle focus:border-softCyan focus:outline-none text-white text-sm transition-all">
-                        </div>
-
-                        <div class="space-y-2">
-                            <label for="message" class="text-xs font-mono text-mutedText uppercase">Message</label>
-                            <textarea id="message" name="message" rows="4" required placeholder="Hi Suhira, I would like to discuss..."
-                                      class="w-full px-4 py-3.5 rounded-xl bg-deepDark border border-borderSubtle focus:border-softCyan focus:outline-none text-white text-sm transition-all resize-none"></textarea>
-                        </div>
-
-                        <button type="submit" id="submit-btn" 
-                                class="w-full py-4 rounded-xl bg-gradient-to-r from-softCyan to-accentLime text-deepDark font-display font-bold text-sm tracking-wide shadow-lg shadow-softCyan/20 hover:scale-[1.01] transition-all flex items-center justify-center gap-3">
-                            <span id="btn-text">Send Message</span>
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Contact Info & Socials (Right Column) -->
-                <div class="lg:col-span-5 space-y-8">
-                    <div class="p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-6">
-                        <h3 class="text-xl font-display font-bold text-white">Direct Information</h3>
-                        
-                        <div class="space-y-4">
-                            <a href="mailto:balarajansuhira@gmail.com" class="flex items-center gap-4 p-3 rounded-xl hover:bg-deepDark transition-colors group">
-                                <div class="w-10 h-10 rounded-full bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs font-mono text-mutedText block">Email</span>
-                                    <span class="text-sm font-semibold text-white group-hover:text-softCyan transition-colors">balarajansuhira@gmail.com</span>
-                                </div>
-                            </a>
-
-                            <a href="tel:+94766420554" class="flex items-center gap-4 p-3 rounded-xl hover:bg-deepDark transition-colors group">
-                                <div class="w-10 h-10 rounded-full bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan group-hover:scale-110 transition-transform">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs font-mono text-mutedText block">Phone</span>
-                                    <span class="text-sm font-semibold text-white group-hover:text-softCyan transition-colors">+94 76 642 05 54</span>
-                                </div>
-                            </a>
-
-                            <div class="flex items-center gap-4 p-3 rounded-xl">
-                                <div class="w-10 h-10 rounded-full bg-accentLime/10 border border-accentLime/30 flex items-center justify-center text-accentLime">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <span class="text-xs font-mono text-mutedText block">Location</span>
-                                    <span class="text-sm font-semibold text-white">Colombo, Sri Lanka</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Social Handles -->
-                    <div class="p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-4">
-                        <h3 class="text-sm font-mono text-mutedText uppercase">Connect On Social Media</h3>
-                        <div class="flex flex-wrap gap-3" id="footer-social-links">
-                            <!-- Populated dynamically via JS -->
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+    <section
+      id="contact"
+      class="py-24 px-6 md:px-12 bg-cardDark/40 border-t border-borderSubtle relative"
+    >
+      <div class="max-w-7xl mx-auto space-y-16">
+        <div class="max-w-3xl space-y-4 text-center md:text-left">
+          <span
+            class="text-xs font-mono uppercase tracking-widest text-softCyan"
+            >Let's Connect</span
+          >
+          <h2
+            class="text-3xl md:text-6xl font-display font-extrabold text-white leading-tight"
+          >
+            Interested in talking? <br /><span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-softCyan to-accentLime"
+              >Let’s do it.</span
+            >
+          </h2>
         </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Contact Form (Left Column) -->
+          <div
+            class="lg:col-span-7 p-8 md:p-10 rounded-3xl bg-cardDark border border-borderSubtle space-y-6 shadow-2xl relative"
+          >
+            <form
+              id="portfolio-contact-form"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="space-y-6"
+            >
+              <!-- Web3Forms Access Key -->
+              <input
+                type="hidden"
+                name="access_key"
+                value="e7f2b66c-a813-41d2-8aa4-1881a7329a70"
+              />
+              <input
+                type="hidden"
+                name="subject"
+                value="New Portfolio Message for Suhira Balarajan!"
+              />
+              <input
+                type="hidden"
+                name="from_name"
+                value="Suhira Portfolio Visitor"
+              />
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label
+                    for="name"
+                    class="text-xs font-mono text-mutedText uppercase"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="John Doe"
+                    class="w-full px-4 py-3.5 rounded-xl bg-deepDark border border-borderSubtle focus:border-softCyan focus:outline-none text-white text-sm transition-all"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    for="email"
+                    class="text-xs font-mono text-mutedText uppercase"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="john@example.com"
+                    class="w-full px-4 py-3.5 rounded-xl bg-deepDark border border-borderSubtle focus:border-softCyan focus:outline-none text-white text-sm transition-all"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  for="subject"
+                  class="text-xs font-mono text-mutedText uppercase"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject_text"
+                  required
+                  placeholder="Job Opportunity / Project Inquiry"
+                  class="w-full px-4 py-3.5 rounded-xl bg-deepDark border border-borderSubtle focus:border-softCyan focus:outline-none text-white text-sm transition-all"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  for="message"
+                  class="text-xs font-mono text-mutedText uppercase"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Hi Suhira, I would like to discuss..."
+                  class="w-full px-4 py-3.5 rounded-xl bg-deepDark border border-borderSubtle focus:border-softCyan focus:outline-none text-white text-sm transition-all resize-none"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full py-4 rounded-xl bg-gradient-to-r from-softCyan to-accentLime text-deepDark font-display font-bold text-sm tracking-wide shadow-lg shadow-softCyan/20 hover:scale-[1.01] transition-all flex items-center justify-center gap-3"
+              >
+                <span id="btn-text">Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info & Socials (Right Column) -->
+          <div class="lg:col-span-5 space-y-8">
+            <div
+              class="p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-6"
+            >
+              <h3 class="text-xl font-display font-bold text-white">
+                Direct Information
+              </h3>
+
+              <div class="space-y-4">
+                <a
+                  href="mailto:balarajansuhira@gmail.com"
+                  class="flex items-center gap-4 p-3 rounded-xl hover:bg-deepDark transition-colors group"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan group-hover:scale-110 transition-transform"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs font-mono text-mutedText block"
+                      >Email</span
+                    >
+                    <span
+                      class="text-sm font-semibold text-white group-hover:text-softCyan transition-colors"
+                      >balarajansuhira@gmail.com</span
+                    >
+                  </div>
+                </a>
+
+                <a
+                  href="tel:+94766420554"
+                  class="flex items-center gap-4 p-3 rounded-xl hover:bg-deepDark transition-colors group"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan group-hover:scale-110 transition-transform"
+                  >
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs font-mono text-mutedText block"
+                      >Phone</span
+                    >
+                    <span
+                      class="text-sm font-semibold text-white group-hover:text-softCyan transition-colors"
+                      >+94 76 642 05 54</span
+                    >
+                  </div>
+                </a>
+
+                <div class="flex items-center gap-4 p-3 rounded-xl">
+                  <div
+                    class="w-10 h-10 rounded-full bg-accentLime/10 border border-accentLime/30 flex items-center justify-center text-accentLime"
+                  >
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs font-mono text-mutedText block"
+                      >Location</span
+                    >
+                    <span class="text-sm font-semibold text-white"
+                      >Colombo, Sri Lanka</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Handles -->
+            <div
+              class="p-8 rounded-3xl bg-cardDark border border-borderSubtle space-y-4"
+            >
+              <h3 class="text-sm font-mono text-mutedText uppercase">
+                Connect On Social Media
+              </h3>
+              <div class="flex flex-wrap gap-3" id="footer-social-links">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Animated Toast Alert Notification -->
-    <div id="toast-alert" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-500 pointer-events-none">
-        <div class="flex items-center gap-4 p-4 rounded-2xl bg-cardDark border border-accentLime/50 shadow-2xl text-white">
-            <div class="w-10 h-10 rounded-full bg-accentLime/20 text-accentLime flex items-center justify-center text-lg">
-                <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <div>
-                <h4 class="text-sm font-bold font-display" id="toast-title">Success!</h4>
-                <p class="text-xs text-mutedText" id="toast-message">Message sent successfully!</p>
-            </div>
+    <div
+      id="toast-alert"
+      class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-500 pointer-events-none"
+    >
+      <div
+        class="flex items-center gap-4 p-4 rounded-2xl bg-cardDark border border-accentLime/50 shadow-2xl text-white"
+      >
+        <div
+          class="w-10 h-10 rounded-full bg-accentLime/20 text-accentLime flex items-center justify-center text-lg"
+        >
+          <i class="fa-solid fa-circle-check"></i>
         </div>
+        <div>
+          <h4 class="text-sm font-bold font-display" id="toast-title">
+            Success!
+          </h4>
+          <p class="text-xs text-mutedText" id="toast-message">
+            Message sent successfully!
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Main Footer -->
-    <footer class="py-8 px-6 md:px-12 bg-deepDark border-t border-borderSubtle text-center text-xs text-mutedText flex flex-col sm:flex-row items-center justify-between gap-4 max-w-7xl mx-auto">
-        <p>&copy; 2026 Suhira Balarajan. Built with modern agency excellence.</p>
-        <a href="#home" class="hover:text-softCyan transition-colors flex items-center gap-2 font-mono">
-            Back to top <i class="fa-solid fa-arrow-up-long"></i>
-        </a>
+    <footer
+      class="py-8 px-6 md:px-12 bg-deepDark border-t border-borderSubtle text-center text-xs text-mutedText flex flex-col sm:flex-row items-center justify-between gap-4 max-w-7xl mx-auto"
+    >
+      <p>&copy; 2026 Suhira Balarajan. Built with modern agency excellence.</p>
+      <a
+        href="#home"
+        class="hover:text-softCyan transition-colors flex items-center gap-2 font-mono"
+      >
+        Back to top <i class="fa-solid fa-arrow-up-long"></i>
+      </a>
     </footer>
 
     <!-- Scripts -->
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
