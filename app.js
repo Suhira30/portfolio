@@ -550,15 +550,19 @@ function renderCredentials() {
 
     if (badgeList) {
         badgeList.innerHTML = (portfolioData.badges || []).map(b => `
-            <div class="p-4 rounded-2xl bg-cardDark border border-borderSubtle space-y-2 text-center">
-                <div class="w-10 h-10 mx-auto rounded-full bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan text-lg">
+            <a href="${b.url || 'https://www.hackerrank.com/profile/Suhira_B'}" target="_blank" rel="noopener noreferrer" 
+               class="p-4 rounded-2xl bg-cardDark border border-borderSubtle space-y-2 text-center hover:border-softCyan/50 hover:bg-cardDarkHover transition-all group block">
+                <div class="w-10 h-10 mx-auto rounded-full bg-softCyan/10 border border-softCyan/30 flex items-center justify-center text-softCyan text-lg group-hover:scale-110 transition-transform">
                     <i class="fa-solid fa-award"></i>
                 </div>
-                <h4 class="text-xs font-display font-bold text-white">${b.name}</h4>
+                <h4 class="text-xs font-display font-bold text-white group-hover:text-softCyan transition-colors flex items-center justify-center gap-1">
+                    <span>${b.name}</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-mutedText"></i>
+                </h4>
                 <div class="flex items-center justify-center gap-1 text-accentLime text-xs">
                     ${Array(b.stars || 5).fill('<i class="fa-solid fa-star"></i>').join('')}
                 </div>
-            </div>
+            </a>
         `).join('');
     }
 

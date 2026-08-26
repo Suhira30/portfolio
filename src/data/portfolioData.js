@@ -245,8 +245,8 @@ export const portfolioData = {
     }
   ],
   badges: [
-    { name: "Java Specialist", stars: 5, color: "gold", icon: "java" },
-    { name: "SQL Database Master", stars: 4, color: "silver", icon: "database" }
+    { name: "Java Specialist", stars: 5, color: "gold", icon: "java", url: "https://www.hackerrank.com/profile/Suhira_B" },
+    { name: "SQL Database Master", stars: 4, color: "silver", icon: "database", url: "https://www.hackerrank.com/profile/Suhira_B" }
   ],
   roles: [
     {
