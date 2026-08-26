@@ -22,30 +22,47 @@ const portfolioData = {
     ]
   },
   skillsMarquee: [
-    "JAVA", "SPRING BOOT", "REACT.JS", "FASTAPI", "PYTHON", "BEAUTIFULSOUP4", "GOOGLE GEMINI API",
-    "TAILWIND CSS", "TYPESCRIPT", "AWS DYNAMODB", "REST APIS", "MYSQL", "POSTGRESQL", "TENSORFLOW",
-    "PYTORCH", "MICROSERVICES", "JWT AUTH", "DOCKER", "FIGMA", "RAILWAY", "SYSTEM DESIGN"
+    "JAVA", "SPRING BOOT", "REACT.JS", "PYTHON", "AWS DYNAMODB", "RESTFUL APIS", "MICROSERVICES",
+    "SQL", "POSTGRESQL", "DOCKER", "JWT AUTH", "TAILWIND CSS", "FASTAPI", "INTELLIJ IDEA", "VS CODE",
+    "CURSOR", "STITCH", "BEAUTIFULSOUP4", "GOOGLE GEMINI API", "NEURAL NETWORKS", "DEEP LEARNING",
+    "PROMPT ENGINEERING", "AGILE/SCRUM", "TEST-DRIVEN DEVELOPMENT", "SYSTEM DESIGN", "OOP", "RAILWAY"
   ],
   skillsCategories: [
     {
       category: "Languages",
-      skills: ["Java", "JavaScript", "Python", "C", "SQL", "HTML5", "CSS3"]
+      skills: ["Java", "JavaScript", "Python", "C", "SQL"]
     },
     {
-      category: "Frameworks & Frontend",
-      skills: ["Spring Boot", "React.js", "FastAPI", "Svelte", "Tailwind CSS", "Material-UI", "Bootstrap"]
+      category: "Frontend",
+      skills: ["React.js", "HTML5", "CSS3", "Svelte", "Tailwind CSS", "Material-UI", "Bootstrap", "Responsive Design"]
     },
     {
-      category: "Databases & Tools",
-      skills: ["AWS DynamoDB", "MySQL", "PostgreSQL", "MS SQL", "Docker", "Maven", "Postman", "Git", "Bitbucket", "Figma"]
+      category: "Backend",
+      skills: ["Spring Boot", "RESTful APIs", "JWT Auth", "Microservices", "Exception Handling", "Web Scraping", "Third-party Integration"]
     },
     {
-      category: "Cloud & Architecture",
-      skills: ["AWS (EC2, S3, DynamoDB)", "Railway", "CI/CD Pipelines", "RESTful APIs", "Microservices", "JWT Security"]
+      category: "Database",
+      skills: ["MySQL", "PostgreSQL", "MS SQL", "AWS DynamoDB", "Database Design", "Query Optimization"]
     },
     {
-      category: "AI, ML & Data Extraction",
-      skills: ["Google Gemini API", "Python", "PyTorch", "TensorFlow", "BeautifulSoup4", "Deep Learning", "SHAP"]
+      category: "Cloud & DevOps",
+      skills: ["AWS (DynamoDB)", "CI/CD", "Version Control (Git, GitHub, Bitbucket)", "Railway"]
+    },
+    {
+      category: "Tools",
+      skills: ["IntelliJ IDEA", "VS Code", "Postman", "MySQL Workbench", "Figma", "Maven", "Cursor", "Stitch", "BeautifulSoup4"]
+    },
+    {
+      category: "Methodologies",
+      skills: ["Agile/Scrum", "OOP", "RESTful Design", "MVC Architecture", "Test-Driven Development"]
+    },
+    {
+      category: "Machine Learning & AI",
+      skills: ["Neural Networks", "Deep Learning", "Feature Extraction", "Data Preprocessing", "Model Training", "LLM Integration", "Prompt Engineering"]
+    },
+    {
+      category: "Core",
+      skills: ["Data Structures", "Algorithms", "Problem Solving", "System Design", "Code Review", "Technical Documentation"]
     }
   ],
   projects: [
@@ -327,7 +344,7 @@ function initPreloader() {
     document.body.style.overflow = 'hidden';
 
     let currentPercent = 0;
-    const duration = 7000; // 7.0 seconds total animation time
+    const duration = 5000; // 5.0 seconds total animation time
     const intervalTime = 30;
     const totalTicks = Math.ceil(duration / intervalTime);
     let tick = 0;
@@ -373,12 +390,12 @@ function initPreloader() {
         if (tick >= totalTicks || currentPercent >= 100) {
             clearInterval(timer);
             updateSteps(100);
-            setTimeout(dismissPreloader, 700);
+            setTimeout(dismissPreloader, 500);
         }
     }, intervalTime);
 
-    // Guaranteed safety fallback after 9 seconds
-    setTimeout(dismissPreloader, 9000);
+    // Guaranteed safety fallback after 6.5 seconds
+    setTimeout(dismissPreloader, 6500);
 }
 
 /* ----------------------------------------------------

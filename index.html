@@ -193,7 +193,7 @@
         const percentEl = document.getElementById("preloader-percent-num");
         const steps = preloader.querySelectorAll(".preloader-step");
         let currentPercent = 0;
-        const duration = 7000; // 7.0 seconds
+        const duration = 5000; // 5.0 seconds
         const intervalTime = 30;
         const totalTicks = Math.ceil(duration / intervalTime);
         let tick = 0;
@@ -240,12 +240,12 @@
           if (tick >= totalTicks || currentPercent >= 100) {
             clearInterval(timer);
             update(100);
-            setTimeout(dismiss, 700);
+            setTimeout(dismiss, 500);
           }
         }, intervalTime);
 
-        // Immediate hard fallback after 9 seconds under any conditions
-        setTimeout(dismiss, 9000);
+        // Immediate hard fallback after 6.5 seconds under any conditions
+        setTimeout(dismiss, 6500);
       })();
     </script>
     <!-- Glowing Custom Cursor Halo -->
@@ -1300,6 +1300,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="app.js?v=1.2"></script>
+    <script src="app.js?v=1.3"></script>
   </body>
 </html>
