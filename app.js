@@ -11,7 +11,7 @@ const portfolioData = {
     address: "Colombo, Sri Lanka",
     cvLink: "https://drive.google.com/file/d/1NYe3eNWbbDtp9WfdQBdM_s9azxOP57Hh/view?usp=sharing",
     githubUrl: "https://github.com/Suhira30",
-    linkedinUrl: "https://www.linkedin.com/in/suhirabalarajan",
+    linkedinUrl: "https://www.linkedin.com/in/suhira-balarajan/",
     hackerrankUrl: "https://www.hackerrank.com/profile/Suhira_B",
     mediumUrl: "https://medium.com/@suhirabalarajan",
     stats: [
@@ -294,7 +294,7 @@ const portfolioData = {
   ],
   socialHandles: [
     { name: "GitHub", url: "https://github.com/Suhira30", icon: "github" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/in/suhirabalarajan", icon: "linkedin" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/suhira-balarajan/", icon: "linkedin" },
     { name: "HackerRank", url: "https://www.hackerrank.com/profile/Suhira_B", icon: "hackerrank" },
     { name: "Medium", url: "https://medium.com/@suhirabalarajan", icon: "medium" }
   ]
