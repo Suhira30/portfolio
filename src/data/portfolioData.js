@@ -171,7 +171,7 @@ export const portfolioData = {
       jobTitle: "Software Engineer Intern",
       company: "Smartzi Lanka (Pvt) Ltd",
       companyDetail: "UK-based B2B Transportation Platform",
-      location: "Remote",
+      location: "Onsite",
       period: "Feb 2025 – Aug 2025",
       type: "6 Months Production Internship",
       description: "Backend Software Engineer contributing to real-world B2B ground transportation integrations, high-scale ride booking, and cloud infrastructure deployment.",
