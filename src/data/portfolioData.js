@@ -17,38 +17,69 @@ export const portfolioData = {
     stats: [
       { number: "06", label: "Months Industry Backend Experience", sub: "Smartzi Lanka (UK-based)" },
       { number: "500+", label: "Daily Bookings Processed", sub: "GNET & Uber B2B Platform" },
-      { number: "06", label: "Core Full-Stack & AI Projects", sub: "Microservices & Multimodal AI" },
+      { number: "07", label: "Core Full-Stack, AI & RAG Projects", sub: "Production RAG, Microservices & Multimodal AI" },
       { number: "3.47", label: "Current CGPA", sub: "University of Moratuwa" }
     ]
   },
   skillsMarquee: [
-    "JAVA", "SPRING BOOT", "REACT.JS", "FASTAPI", "PYTHON", "BEAUTIFULSOUP4", "GOOGLE GEMINI API",
-    "TAILWIND CSS", "TYPESCRIPT", "AWS DYNAMODB", "REST APIS", "MYSQL", "POSTGRESQL", "TENSORFLOW",
-    "PYTORCH", "MICROSERVICES", "JWT AUTH", "DOCKER", "FIGMA", "RAILWAY", "SYSTEM DESIGN"
+    "JAVA", "SPRING BOOT", "REACT.JS", "PYTHON", "AWS DYNAMODB", "RESTFUL APIS", "MICROSERVICES",
+    "SQL", "POSTGRESQL", "DOCKER", "JWT AUTH", "TAILWIND CSS", "FASTAPI", "INTELLIJ IDEA", "VS CODE",
+    "CURSOR", "STITCH", "BEAUTIFULSOUP4", "GOOGLE GEMINI API", "NEURAL NETWORKS", "DEEP LEARNING",
+    "PROMPT ENGINEERING", "AGILE/SCRUM", "TEST-DRIVEN DEVELOPMENT", "SYSTEM DESIGN", "OOP", "RAILWAY"
   ],
   skillsCategories: [
     {
       category: "Languages",
-      skills: ["Java", "JavaScript", "Python", "C", "SQL", "HTML5", "CSS3"]
+      skills: ["Java", "JavaScript", "Python", "C", "SQL"]
     },
     {
-      category: "Frameworks & Frontend",
-      skills: ["Spring Boot", "React.js", "FastAPI", "Svelte", "Tailwind CSS", "Material-UI", "Bootstrap"]
+      category: "Frontend",
+      skills: ["React.js", "HTML5", "CSS3", "Svelte", "Tailwind CSS", "Material-UI", "Bootstrap", "Responsive Design"]
     },
     {
-      category: "Databases & Tools",
-      skills: ["AWS DynamoDB", "MySQL", "PostgreSQL", "MS SQL", "Docker", "Maven", "Postman", "Git", "Bitbucket", "Figma"]
+      category: "Backend",
+      skills: ["Spring Boot", "RESTful APIs", "JWT Auth", "Microservices", "Exception Handling", "Web Scraping", "Third-party Integration"]
     },
     {
-      category: "Cloud & Architecture",
-      skills: ["AWS (EC2, S3, DynamoDB)", "Railway", "CI/CD Pipelines", "RESTful APIs", "Microservices", "JWT Security"]
+      category: "Database",
+      skills: ["MySQL", "PostgreSQL", "MS SQL", "AWS DynamoDB", "Database Design", "Query Optimization"]
     },
     {
-      category: "AI, ML & Data Extraction",
-      skills: ["Google Gemini API", "Python", "PyTorch", "TensorFlow", "BeautifulSoup4", "Deep Learning", "SHAP"]
+      category: "Cloud & DevOps",
+      skills: ["AWS (DynamoDB)", "CI/CD", "Version Control (Git, GitHub, Bitbucket)", "Railway"]
+    },
+    {
+      category: "Tools",
+      skills: ["IntelliJ IDEA", "VS Code", "Postman", "MySQL Workbench", "Figma", "Maven", "Cursor", "Stitch", "BeautifulSoup4"]
+    },
+    {
+      category: "Methodologies",
+      skills: ["Agile/Scrum", "OOP", "RESTful Design", "MVC Architecture", "Test-Driven Development"]
+    },
+    {
+      category: "Machine Learning & AI",
+      skills: ["Neural Networks", "Deep Learning", "Feature Extraction", "Data Preprocessing", "Model Training", "LLM Integration", "Prompt Engineering"]
+    },
+    {
+      category: "Core",
+      skills: ["Data Structures", "Algorithms", "Problem Solving", "System Design", "Code Review", "Technical Documentation"]
     }
   ],
   projects: [
+    {
+      id: "cellmate-rag",
+      title: "CellMate: AI-Powered RAG Study Assistant for G.C.E. A/L Biology",
+      category: "AI / Production RAG (Independent)",
+      categoryKey: "ai",
+      description: "Production-grade Retrieval-Augmented Generation (RAG) system built from scratch using Google Gemini APIs & ChromaDB that answers Sri Lankan A/L Biology exam questions with strict NIE textbook grounding and page-level citations.",
+      longDescription: "• Developed an end-to-end Retrieval-Augmented Generation (RAG) system from scratch using Google Gemini APIs (gemini-2.5-flash & gemini-embedding-2) and ChromaDB without relying on high-level frameworks like LangChain.\n• Grounded exclusively in the official NIE Resource Book (Unit 02: Chemical and Cellular Basis of Life), featuring strict hallucination prevention and page-level citation badges.\n• Implemented a custom Structure-Recursive hybrid chunking strategy evaluated against 5 alternatives (93.3% Hit@4, 0.833 MRR, 73.3% Hit@1, 70.0% Precision@4).\n• Exposed a REST API via FastAPI + Pydantic v2 alongside an interactive Streamlit UI featuring custom conversation bubbles, model fallback chains, and document filtering.\n• Deployed on Streamlit Community Cloud with pre-built ChromaDB vectorstore for zero-cost cloud execution without re-ingestion overhead.",
+      techStack: ["Python", "FastAPI", "Streamlit", "ChromaDB", "Google Gemini API", "PyMuPDF", "pdfplumber", "PyTesseract", "Pydantic"],
+      image: "assets/AI-Powered Website Audit Tool.png",
+      githubUrl: "https://github.com/Suhira30/CellMate",
+      frontendUrl: "https://cellmate.streamlit.app",
+      featured: true,
+      metrics: "93.3% Hit@4, 0.833 MRR, Page-Level Citations & Zero-Cost RAG"
+    },
     {
       id: "ai-website-audit",
       title: "AI-Powered Website Audit Tool",
