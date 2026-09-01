@@ -74,7 +74,7 @@ export const portfolioData = {
       description: "Production-grade Retrieval-Augmented Generation (RAG) system built from scratch using Google Gemini APIs & ChromaDB that answers Sri Lankan A/L Biology exam questions with strict NIE textbook grounding and page-level citations.",
       longDescription: "• Developed an end-to-end Retrieval-Augmented Generation (RAG) system from scratch using Google Gemini APIs (gemini-2.5-flash & gemini-embedding-2) and ChromaDB without relying on high-level frameworks like LangChain.\n• Grounded exclusively in the official NIE Resource Book (Unit 02: Chemical and Cellular Basis of Life), featuring strict hallucination prevention and page-level citation badges.\n• Implemented a custom Structure-Recursive hybrid chunking strategy evaluated against 5 alternatives (93.3% Hit@4, 0.833 MRR, 73.3% Hit@1, 70.0% Precision@4).\n• Exposed a REST API via FastAPI + Pydantic v2 alongside an interactive Streamlit UI featuring custom conversation bubbles, model fallback chains, and document filtering.\n• Deployed on Streamlit Community Cloud with pre-built ChromaDB vectorstore for zero-cost cloud execution without re-ingestion overhead.",
       techStack: ["Python", "FastAPI", "Streamlit", "ChromaDB", "Google Gemini API", "PyMuPDF", "pdfplumber", "PyTesseract", "Pydantic"],
-      image: "assets/AI-Powered Website Audit Tool.png",
+      image: "assets/CallMate.png",
       githubUrl: "https://github.com/Suhira30/CellMate",
       frontendUrl: "https://cellmate.streamlit.app/",
       featured: true,
