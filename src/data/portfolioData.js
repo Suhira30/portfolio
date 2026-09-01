@@ -76,7 +76,7 @@ export const portfolioData = {
       techStack: ["Python", "FastAPI", "Streamlit", "ChromaDB", "Google Gemini API", "PyMuPDF", "pdfplumber", "PyTesseract", "Pydantic"],
       image: "assets/AI-Powered Website Audit Tool.png",
       githubUrl: "https://github.com/Suhira30/CellMate",
-      frontendUrl: "https://cellmate.streamlit.app",
+      frontendUrl: "https://cellmate.streamlit.app/",
       featured: true,
       metrics: "93.3% Hit@4, 0.833 MRR, Page-Level Citations & Zero-Cost RAG"
     },
