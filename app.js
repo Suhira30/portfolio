@@ -751,6 +751,51 @@ function initProjectFilters() {
     });
 }
 
+function renderProjectLinks(project) {
+    let html = '';
+
+    // Check if frontendUrl is a deployed web application (e.g. streamlit.app, railway.app, vercel.app, etc.)
+    const isLiveDemo = project.frontendUrl && !project.frontendUrl.includes('github.com');
+    
+    if (isLiveDemo || project.liveUrl || project.demoUrl) {
+        const liveLink = project.liveUrl || project.demoUrl || project.frontendUrl;
+        html += `
+            <a href="${liveLink}" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-gradient-to-r from-softCyan to-accentLime text-deepDark font-display font-bold text-xs shadow-lg shadow-softCyan/20 hover:scale-105 transition-all flex items-center gap-2">
+                <i class="fa-solid fa-rocket text-sm"></i> Live Demo App <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+        `;
+    }
+
+    // GitHub Source Code Repo
+    if (project.githubUrl) {
+        html += `
+            <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan text-white hover:text-softCyan font-display font-bold text-xs transition-all flex items-center gap-2">
+                <i class="fa-brands fa-github text-sm"></i> Source Code / GitHub
+            </a>
+        `;
+    }
+
+    // Frontend Repo (if github link)
+    if (project.frontendUrl && project.frontendUrl.includes('github.com')) {
+        html += `
+            <a href="${project.frontendUrl}" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan text-white hover:text-softCyan font-display font-bold text-xs transition-all flex items-center gap-2">
+                <i class="fa-brands fa-github text-sm"></i> Frontend Repo
+            </a>
+        `;
+    }
+
+    // Backend Repo
+    if (project.backendUrl) {
+        html += `
+            <a href="${project.backendUrl}" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan text-white hover:text-softCyan font-display font-bold text-xs transition-all flex items-center gap-2">
+                <i class="fa-brands fa-github text-sm"></i> Backend Repo
+            </a>
+        `;
+    }
+
+    return html;
+}
+
 function openProjectModal(project) {
     const modal = document.getElementById('project-modal');
     const modalBody = document.getElementById('modal-content-body');
@@ -790,21 +835,7 @@ function openProjectModal(project) {
             </div>
 
             <div class="flex flex-wrap gap-4 pt-6 border-t border-borderSubtle">
-                ${project.frontendUrl ? `
-                    <a href="${project.frontendUrl}" target="_blank" class="px-6 py-3 rounded-full bg-softCyan text-deepDark font-display font-bold text-xs hover:bg-softCyan/90 transition-all flex items-center gap-2">
-                        <i class="fa-brands fa-github text-sm"></i> ${project.backendUrl ? 'Frontend Repo' : 'GitHub Repository'}
-                    </a>
-                ` : ''}
-                ${project.backendUrl ? `
-                    <a href="${project.backendUrl}" target="_blank" class="px-6 py-3 rounded-full bg-cardDark border border-borderSubtle hover:border-softCyan text-white font-display font-bold text-xs transition-all flex items-center gap-2">
-                        <i class="fa-brands fa-github text-sm"></i> Backend Repo
-                    </a>
-                ` : ''}
-                ${project.githubUrl ? `
-                    <a href="${project.githubUrl}" target="_blank" class="px-6 py-3 rounded-full bg-softCyan text-deepDark font-display font-bold text-xs hover:bg-softCyan/90 transition-all flex items-center gap-2">
-                        <i class="fa-brands fa-github text-sm"></i> GitHub Repository
-                    </a>
-                ` : ''}
+                ${renderProjectLinks(project)}
             </div>
         </div>
     `;
