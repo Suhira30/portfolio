@@ -18,7 +18,7 @@ const portfolioData = {
       { number: "06", label: "Months Industry Backend Experience", sub: "Smartzi Lanka (UK-based)" },
       { number: "500+", label: "Daily Bookings Processed", sub: "GNET & Uber B2B Platform" },
       { number: "07", label: "Core Full-Stack, AI & RAG Projects", sub: "Production RAG, Microservices & Multimodal AI" },
-      { number: "3.47", label: "Current CGPA", sub: "University of Moratuwa" }
+      { number: "3.50", label: "Current CGPA", sub: "University of Moratuwa" }
     ]
   },
   skillsMarquee: [
@@ -223,7 +223,7 @@ const portfolioData = {
       institution: "University of Moratuwa",
       location: "Moratuwa, Sri Lanka",
       period: "Jun 2022 – 2026",
-      grade: "CGPA: 3.47 / 4.0",
+      grade: "CGPA: 3.50 / 4.0",
       details: "Information Technology graduate specializing in Software Engineering, Backend Systems, Web Technologies, Microservices, and AI/ML.",
       highlights: ["Final Year Research Project in Multimodal AI", "6 Months Production Backend Internship"]
     },
