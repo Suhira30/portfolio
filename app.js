@@ -22,10 +22,10 @@ const portfolioData = {
     ]
   },
   skillsMarquee: [
-    "JAVA", "SPRING BOOT", "REACT.JS", "PYTHON", "AWS DYNAMODB", "RESTFUL APIS", "MICROSERVICES",
-    "SQL", "POSTGRESQL", "DOCKER", "JWT AUTH", "TAILWIND CSS", "FASTAPI", "INTELLIJ IDEA", "VS CODE",
-    "CURSOR", "STITCH", "BEAUTIFULSOUP4", "GOOGLE GEMINI API", "NEURAL NETWORKS", "DEEP LEARNING",
-    "PROMPT ENGINEERING", "AGILE/SCRUM", "TEST-DRIVEN DEVELOPMENT", "SYSTEM DESIGN", "OOP", "RAILWAY"
+    "JAVA", "SPRING BOOT", "REACT.JS", "PYTHON", "RAG (RETRIEVAL-AUGMENTED GENERATION)", "CHROMADB (VECTOR DB)", "STREAMLIT CLOUD",
+    "AWS DYNAMODB", "RESTFUL APIS", "MICROSERVICES", "SQL", "POSTGRESQL", "DOCKER", "JWT AUTH", "TAILWIND CSS", "FASTAPI",
+    "PYDANTIC V2", "CLAUDE CODE", "GOOGLE ANTIGRAVITY", "INTELLIJ IDEA", "VS CODE", "CURSOR", "STITCH", "BEAUTIFULSOUP4",
+    "PYMUPDF", "GOOGLE GEMINI API", "NEURAL NETWORKS", "DEEP LEARNING", "PROMPT ENGINEERING", "AGILE/SCRUM", "TEST-DRIVEN DEVELOPMENT", "SYSTEM DESIGN", "OOP", "RAILWAY"
   ],
   skillsCategories: [
     {
@@ -34,23 +34,23 @@ const portfolioData = {
     },
     {
       category: "Frontend",
-      skills: ["React.js", "HTML5", "CSS3", "Svelte", "Tailwind CSS", "Material-UI", "Bootstrap", "Responsive Design"]
+      skills: ["React.js", "Streamlit", "HTML5", "CSS3", "Svelte", "Tailwind CSS", "Material-UI", "Bootstrap", "Responsive Design"]
     },
     {
       category: "Backend",
-      skills: ["Spring Boot", "RESTful APIs", "JWT Auth", "Microservices", "Exception Handling", "Web Scraping", "Third-party Integration"]
+      skills: ["Spring Boot", "FastAPI", "RESTful APIs", "JWT Auth", "Pydantic v2", "Microservices", "Exception Handling", "Web Scraping", "Third-party Integration"]
     },
     {
       category: "Database",
-      skills: ["MySQL", "PostgreSQL", "MS SQL", "AWS DynamoDB", "Database Design", "Query Optimization"]
+      skills: ["ChromaDB (Vector DB)", "MySQL", "PostgreSQL", "MS SQL", "AWS DynamoDB", "Database Design", "Query Optimization"]
     },
     {
       category: "Cloud & DevOps",
-      skills: ["AWS (DynamoDB)", "CI/CD", "Version Control (Git, GitHub, Bitbucket)", "Railway"]
+      skills: ["AWS (DynamoDB)", "Streamlit Community Cloud", "Railway", "CI/CD", "Version Control (Git, GitHub, Bitbucket)"]
     },
     {
       category: "Tools",
-      skills: ["IntelliJ IDEA", "VS Code", "Postman", "MySQL Workbench", "Figma", "Maven", "Cursor", "Stitch", "BeautifulSoup4"]
+      skills: ["IntelliJ IDEA", "VS Code", "Claude Code", "Google Antigravity", "Cursor", "Stitch", "Postman", "MySQL Workbench", "Figma", "Maven", "BeautifulSoup4", "PyMuPDF", "pdfplumber", "PyTesseract"]
     },
     {
       category: "Methodologies",
@@ -58,7 +58,7 @@ const portfolioData = {
     },
     {
       category: "Machine Learning & AI",
-      skills: ["Neural Networks", "Deep Learning", "Feature Extraction", "Data Preprocessing", "Model Training", "LLM Integration", "Prompt Engineering"]
+      skills: ["RAG (Retrieval-Augmented Generation)", "Vector Databases (ChromaDB)", "Google Gemini Embedding & Generation APIs", "Neural Networks", "Deep Learning", "Feature Extraction", "Data Preprocessing", "Model Training", "LLM Integration", "Prompt Engineering"]
     },
     {
       category: "Core",
