@@ -90,6 +90,7 @@ export const portfolioData = {
       techStack: ["Python", "FastAPI", "BeautifulSoup4", "React", "Google Gemini API", "Stitch", "Railway"],
       image: "assets/AI-Powered Website Audit Tool.png",
       githubUrl: "https://github.com/Suhira30/Eight25-Assignment.git",
+      frontendUrl: "https://web-audit-assignment-suhi.vercel.app/",
       featured: true,
       metrics: "Google Gemini API, Scraper Pipeline & Railway Deployment"
     },
