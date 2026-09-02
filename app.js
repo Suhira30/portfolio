@@ -9,7 +9,7 @@ const portfolioData = {
     email: "balarajansuhira@gmail.com",
     phoneNumber: "+94 76 642 05 54",
     address: "Colombo, Sri Lanka",
-    cvLink: "https://drive.google.com/file/d/1NYe3eNWbbDtp9WfdQBdM_s9azxOP57Hh/view?usp=sharing",
+    cvLink: "https://drive.google.com/file/d/1LofFi1_QL2wCfn2WQ0qe9n4ds-tXzUmd/view?usp=sharing",
     githubUrl: "https://github.com/Suhira30",
     linkedinUrl: "https://www.linkedin.com/in/suhira-balarajan/",
     hackerrankUrl: "https://www.hackerrank.com/profile/Suhira_B",
